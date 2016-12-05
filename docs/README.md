@@ -7,20 +7,20 @@
 [Trello link][trello]
 
 [quicknote]:https://github.com/htoor91/Quicknote/
-[heroku]: www.heroku.com
-[trello]: www.trello.com
+[heroku]:www.heroku.com
+[trello]:www.trello.com
 
 ## Minimum Viable Product
 
 Quicknote is a web application inspired by Evernote built using Ruby on Rails and React/Redux.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
-- [ ] New account creation, login, and guest/demo login
-- [ ] Production README
 - [ ] Hosting on Heroku
+- [ ] New account creation, login, and guest/demo login
 - [ ] Notes
 - [ ] Notebooks for organizing notes
 - [ ] Tags
 - [ ] Rich Text Editing
+- [ ] Production README
 
 ## Design Docs
 * [View Wireframes][wireframes]
@@ -30,12 +30,12 @@ Quicknote is a web application inspired by Evernote built using Ruby on Rails an
 * [Redux Structure][redux-structure]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[redux-structure]: docs/redux-structure.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[wireframes]: ./wireframes
+[components]: ./component-hierarchy.md
+[redux-structure]: ./redux-structure.md
+[sample-state]: ./sample-state.md
+[api-endpoints]: ./api-endpoints.md
+[schema]: ./schema.md
 
 ## Implementation Timeline
 
