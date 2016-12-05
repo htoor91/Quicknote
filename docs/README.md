@@ -8,7 +8,7 @@
 
 [quicknote]:https://github.com/htoor91/Quicknote/
 [heroku]:www.heroku.com
-[trello]:www.trello.com
+[trello]:https://trello.com/b/AfPOrlAs/quicknote
 
 ## Minimum Viable Product
 
