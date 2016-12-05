@@ -27,12 +27,12 @@ Quicknote is a web application inspired by Evernote built using Ruby on Rails an
 * [React Components][components]
 * [API endpoints][api-endpoints]
 * [DB schema][schema]
-* [Redux Structure][redux-structure]
 * [Sample State][sample-state]
+* [Redux Structure (TBD)][redux-structure]
 
 [wireframes]: ./wireframes
 [components]: ./component-hierarchy.md
-[redux-structure (TBD)]: ./redux-structure.md
+[redux-structure]: ./redux-structure.md
 [sample-state]: ./sample-state.md
 [api-endpoints]: ./api-endpoints.md
 [schema]: ./schema.md
