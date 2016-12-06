@@ -1,5 +1,5 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
+import SplashContainer from './splash/splash_container';
 import SessionFormContainer from './session_form/session_form_container';
 import { Link } from 'react-router';
 
@@ -10,7 +10,7 @@ const App = ({ children }) => {
         <Link to="/" className="header-link">
           <h1>Quicknotes</h1>
         </Link>
-        <GreetingContainer />
+        <SplashContainer />
       </header>
       {children}
     </div>
