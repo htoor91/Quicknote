@@ -139,3 +139,5 @@
 [2016-12-06 17:23:16 -0500 Apps-Mac-mini-2.local (68546)] INFO : Installing Rails 4 Error instrumentation
 [2016-12-06 17:23:16 -0500 Apps-Mac-mini-2.local (68546)] INFO : Finished instrumentation
 [2016-12-06 17:23:17 -0500 Apps-Mac-mini-2.local (68546)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-12-06 17:36:56 -0500 Apps-Mac-mini-2.local (68546)] ERROR : Invalid license key, please contact support@newrelic.com
+[2016-12-06 17:36:56 -0500 Apps-Mac-mini-2.local (68546)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
