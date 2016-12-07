@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -15,13 +15,13 @@ class SessionForm extends React.Component {
 
   componentDidUpdate() {
     if (this.props.loggedIn) {
-      this.props.router.push("/");
+      hashHistory.push("/");
     }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = { user: Object.assign({}, this.state) };
+    const user = { user: this.state };
     this.props.processForm(user);
   }
 
@@ -31,14 +31,6 @@ class SessionForm extends React.Component {
         [field]: event.currentTarget.value
       });
     };
-  }
-
-  navLink() {
-    if (this.props.formType === "Log In:") {
-      return <Link to="/signup">Sign Up</Link>;
-    } else {
-      return <Link to="/login">Log In</Link>;
-    }
   }
 
   renderErrors() {
@@ -58,16 +50,20 @@ class SessionForm extends React.Component {
 		);
 	}
 
+  clearForm() {
+    this.setState( {
+      username: "",
+      password: ""
+    });
+  }
+
   render() {
 
     return (
       <div className="login-form">
 
         <h2>{ this.props.formType }</h2>
-        You can { this.navLink() } instead!
-        <br/>
         { this.renderErrors() }
-
         <form onSubmit={ this.handleSubmit }>
           <label>Username:
             <input type="text" onChange={ this.handleChange("username") }

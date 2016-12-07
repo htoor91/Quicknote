@@ -160,3 +160,67 @@
 [2016-12-06 20:44:43 -0500 Hassans-MacBook-Air.local (24385)] INFO : Installing Rails 4 Error instrumentation
 [2016-12-06 20:44:43 -0500 Hassans-MacBook-Air.local (24385)] INFO : Finished instrumentation
 [2016-12-06 20:44:43 -0500 Hassans-MacBook-Air.local (24385)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-12-06 21:46:17 -0500 Hassans-MacBook-Air.local (24385)] ERROR : Invalid license key, please contact support@newrelic.com
+[2016-12-06 21:46:17 -0500 Hassans-MacBook-Air.local (24385)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2016-12-07 09:40:35 -0500 Hassans-MacBook-Air.local (24385)] INFO : Starting Agent shutdown
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Starting the New Relic agent in "development" environment.
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] WARN : No configuration file found. Working directory = /Users/hassantoor/Desktop/Quicknotes
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] WARN : Looked in these locations (based on defaults): /Users/hassantoor/Desktop/Quicknotes/config/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/config/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/newrelic.yml, /Users/hassantoor/.newrelic/newrelic.yml, /Users/hassantoor/newrelic.yml
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Environment: development
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Dispatcher: webrick
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Application: development
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing ActiveJob instrumentation
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing Net instrumentation
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-12-07 09:40:51 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing Rails 4 Controller instrumentation
+[2016-12-07 09:40:52 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing Rails 4 view instrumentation
+[2016-12-07 09:40:52 -0500 Hassans-MacBook-Air.local (26370)] INFO : Installing Rails 4 Error instrumentation
+[2016-12-07 09:40:52 -0500 Hassans-MacBook-Air.local (26370)] INFO : Finished instrumentation
+[2016-12-07 09:40:53 -0500 Hassans-MacBook-Air.local (26370)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-12-07 09:42:14 -0500 Hassans-MacBook-Air.local (26370)] ERROR : Invalid license key, please contact support@newrelic.com
+[2016-12-07 09:42:14 -0500 Hassans-MacBook-Air.local (26370)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Starting the New Relic agent in "development" environment.
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] WARN : No configuration file found. Working directory = /Users/hassantoor/Desktop/Quicknotes
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] WARN : Looked in these locations (based on defaults): /Users/hassantoor/Desktop/Quicknotes/config/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/config/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/newrelic.yml, /Users/hassantoor/.newrelic/newrelic.yml, /Users/hassantoor/newrelic.yml
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Environment: development
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : No known dispatcher detected.
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Application: development
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing ActiveJob instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing Net instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing Rails 4 Controller instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing Rails 4 view instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Installing Rails 4 Error instrumentation
+[2016-12-07 09:49:08 -0500 Hassans-MacBook-Air.local (26665)] INFO : Finished instrumentation
+[2016-12-07 11:14:21 -0500 Hassans-MacBook-Air.local (26370)] INFO : Starting Agent shutdown
+[2016-12-07 11:14:55 -0500 Hassans-MacBook-Air.local (27453)] INFO : Starting the New Relic agent in "development" environment.
+[2016-12-07 11:14:55 -0500 Hassans-MacBook-Air.local (27453)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-12-07 11:14:55 -0500 Hassans-MacBook-Air.local (27453)] WARN : No configuration file found. Working directory = /Users/hassantoor/Desktop/Quicknotes
+[2016-12-07 11:14:55 -0500 Hassans-MacBook-Air.local (27453)] WARN : Looked in these locations (based on defaults): /Users/hassantoor/Desktop/Quicknotes/config/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/config/newrelic.yml, /Users/hassantoor/Desktop/Quicknotes/newrelic.yml, /Users/hassantoor/.newrelic/newrelic.yml, /Users/hassantoor/newrelic.yml
+[2016-12-07 11:14:55 -0500 Hassans-MacBook-Air.local (27453)] INFO : Environment: development
+[2016-12-07 11:14:55 -0500 Hassans-MacBook-Air.local (27453)] INFO : Dispatcher: webrick
+[2016-12-07 11:14:55 -0500 Hassans-MacBook-Air.local (27453)] INFO : Application: development
+[2016-12-07 11:14:55 -0500 Hassans-MacBook-Air.local (27453)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing ActiveJob instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing Net instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing Rails 4 Controller instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing Rails 4 view instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Installing Rails 4 Error instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Finished instrumentation
+[2016-12-07 11:14:56 -0500 Hassans-MacBook-Air.local (27453)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-12-07 11:33:30 -0500 Hassans-MacBook-Air.local (27453)] ERROR : Invalid license key, please contact support@newrelic.com
+[2016-12-07 11:33:30 -0500 Hassans-MacBook-Air.local (27453)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
