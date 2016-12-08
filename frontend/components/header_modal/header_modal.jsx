@@ -16,10 +16,12 @@ class HeaderModal extends React.Component {
 
   openLoginModal() {
     this.setState({ loginModalOpen: true });
+    this.props.clearErr();
   }
 
   closeLoginModal() {
     this.setState({ loginModalOpen: false });
+    this.props.clearErr();
   }
 
   componentWillReceiveProps(newProps){

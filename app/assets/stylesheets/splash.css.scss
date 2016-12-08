@@ -50,7 +50,7 @@
 
 .content-login li {
   color: white;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 }
 
 .content-login h2 {
@@ -73,7 +73,11 @@
   outline: none;
 }
 
-.login-form label, .top-error {
+.content fieldset {
+  margin-top: 10px;
+}
+
+.login-form label, .top-errors {
   list-style: none;
 }
 
@@ -83,7 +87,7 @@
     font-size: 16px;
     text-align: center;
     border-radius: 3px;
-    border: 1px solid black;
+    border: 1px solid #aaa;
 }
 
 .content .signup-form input[type="submit"], .content-login-button, .guest-login-button, .header-login-button{
@@ -108,9 +112,22 @@
   margin-left: 82px;
 }
 
+.content .top-errors li {
+  margin-bottom: -6px;
+}
+
 .guest-login-button {
   float: right;
   margin-right: 82px;
+}
+
+form li, .top-errors {
+  font-family: "Josefin Sans";
+}
+
+.top-errors {
+  margin: 7px 0;
+  line-height: 21px;
 }
 
 .passErrors {

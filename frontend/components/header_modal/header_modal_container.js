@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import HeaderModal from './header_modal';
-import { login } from '../../actions/session_actions';
+import { login, clearErr } from '../../actions/session_actions';
 
 const mapStateToProps = ( {session } ) => {
   return ({
@@ -11,6 +11,7 @@ const mapStateToProps = ( {session } ) => {
 const mapDispatchToProps = (dispatch) => {
   return ({
     login: (user) => dispatch(login(user)),
+    clearErr: () => clearErr(dispatch)
   });
 };
 

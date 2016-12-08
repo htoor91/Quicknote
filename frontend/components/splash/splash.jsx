@@ -20,10 +20,12 @@ class Splash extends React.Component {
 
   openLoginModal() {
     this.setState({ loginModalOpen: true });
+    this.props.clearErr();
   }
 
   closeLoginModal() {
     this.setState({ loginModalOpen: false });
+    this.props.clearErr();
   }
 
   guestLogin(e) {
@@ -45,7 +47,7 @@ class Splash extends React.Component {
       <div className="content-login group">
 
         <h2>Remember Everything</h2>
-        <p>Note taking made simple</p>
+        <p>Notes made simple</p>
 
         <div className="signup-form">
           <SessionFormContainer formType={"Sign Up"} />

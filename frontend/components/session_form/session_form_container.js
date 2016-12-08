@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch, {formType}) => {
   return ({
     formType,
     buttonVal,
-    processForm: (user) => dispatch(process(user))
+    processForm: (user) => dispatch(process(user)),
   });
 };
 

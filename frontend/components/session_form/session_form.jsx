@@ -16,6 +16,10 @@ class SessionForm extends React.Component {
 
   }
 
+  componentDidMount() {
+    this.setState({ credsErrors: ""});
+  }
+
   componentDidUpdate() {
     if (this.props.loggedIn) {
       hashHistory.push("/");
@@ -67,7 +71,9 @@ class SessionForm extends React.Component {
       });
     };
 
-    if (this.props.formType === "Log In:"){
+
+    if (this.props.errors.length === 1 && (this.props.errors[0] === "Invalid username or password"
+        || this.props.errors[0] === "Username has already been taken")){
       return(
         <ul className="top-errors">
           { errors() }
@@ -93,8 +99,6 @@ class SessionForm extends React.Component {
 
         { this.renderErrors() }
         <form onSubmit={ this.handleSubmit }>
-
-          <li className="top-error">{ this.state.credsError }</li>
           <fieldset>
             <label>
               <input type="text" onChange={ this.handleChange("username") }
