@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
               <input type="password" onChange={ this.handleChange("password") }
                 value={ this.state.password }
                 placeholder="Password"/>
-              <li>{ this.state.passErrors }</li>
+              <li className="passErrors">{ this.state.passErrors }</li>
             </label>
           </fieldset>
           <br/>

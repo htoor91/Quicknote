@@ -10,9 +10,9 @@ const App = ({ children }) => {
       <header className="header group">
         <div className="header-left group">
           <img
-            src="https://maxcdn.icons8.com/Color/PNG/24/Animals/elephant-24.png"
+            src={ window.headerIcon }
             className="header-icon"
-            title="Elephant"
+            title="FastForward"
             width="40" />
           <Link to="/" className="header-link">
             <h1>QUICKNOTE</h1>
@@ -26,9 +26,8 @@ const App = ({ children }) => {
         </video>
         <SplashContainer />
       </section>
-
       <footer className="footer">
-
+        <p>Organize your life today, with <span>Quicknote</span></p>
       </footer>
       {children}
     </div>

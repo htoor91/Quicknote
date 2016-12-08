@@ -10,14 +10,11 @@ export const SessionModalStyle = {
   content: {
     position: 'fixed',
     width: '400px',
-    height: '300px',
-    top: '40%',
+    top: '50%',
     left: '50%',
-    bottom: 'auto',
-    right: 'auto',
-    borderRadius: '10px',
     transform: 'translate(-50%,-50%)',
-    boxShadow: '1px 1px 2px black',
-    overflow: 'hidden'
+    display: 'flex',
+    align_items: 'center',
+    flex_direction: 'column'
   }
 };

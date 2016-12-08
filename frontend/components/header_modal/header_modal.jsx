@@ -39,8 +39,14 @@ class HeaderModal extends React.Component {
           isOpen={this.state.loginModalOpen}
           onRequestClose={this.closeLoginModal}
           style={ SessionModalStyle }
+          className="react-modal"
           contentLabel="Login Modal">
-          <h1>Ayyyyy</h1>
+          <h1>Sign In</h1>
+          <img
+            src={ window.modalIcon }
+            className="modal-icon"
+            title="Owl"
+            width="80" />
           <SessionFormContainer formType={"Log In:"} />
         </Modal>
       </div>
