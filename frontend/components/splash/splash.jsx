@@ -42,26 +42,28 @@ class Splash extends React.Component {
   render() {
 
     return(
-      <div className="login-signup">
-        <button className="header-login" onClick={this.openLoginModal}>Log In</button>
-        <button className="content-login" onClick={this.openLoginModal}>Log In</button>
-        <button className="guest-login" onClick={this.openLoginModal}>Guest</button>
+      <div className="content-login">
 
+        <h2>Remember Everything</h2>
+        <p>Note taking made simple</p>
+
+        <div className="signup-form">
+          <SessionFormContainer formType={"Sign Up"} />
+        </div>
+
+
+        <button className="content-login-button" onClick={this.openLoginModal}>Sign In</button>
+        <button className="guest-login-button" onClick={this.guestLogin}>Guest</button>
 
         <Modal
           isOpen={this.state.loginModalOpen}
           onRequestClose={this.closeLoginModal}
           style={ SessionModalStyle }
           contentLabel="Login Modal">
-          <h1>Ayyyyy</h1>
           <SessionFormContainer formType={"Log In:"} />
         </Modal>
 
-        <div className="signup-form">
-          <SessionFormContainer formType={"Sign Up"} />
-        </div>
       </div>
-
 
     );
 
