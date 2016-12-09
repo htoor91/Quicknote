@@ -20,7 +20,7 @@ class Note < ActiveRecord::Base
   )
   belongs_to :notebook
 
-  validates :user, :notebook_id, presence: true
+  validates :author, presence: true
 
 
 end

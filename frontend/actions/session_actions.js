@@ -29,10 +29,6 @@ export function signup(user) {
   };
 }
 
-export function clearErr(dispatch) {
-  dispatch(clearErrors());
-}
-
 export const receiveCurrentUser = (currentUser) => {
   return {
     type: RECEIVE_CURRENT_USER,

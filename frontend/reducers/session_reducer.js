@@ -2,7 +2,7 @@ import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, CLEAR_ERRORS } from '../actions/s
 import merge from 'lodash/merge';
 
 // { session: { currentUser: {...}, errors: [...] } }
-// so session "state" is : { currentUser... etc}
+// Root reducer takes care of the { session: } part
 const initState = {
   currentUser: null,
   errors: [],
