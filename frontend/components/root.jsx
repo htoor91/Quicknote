@@ -5,7 +5,7 @@ import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import HomeContainer from './home/home_container';
 
-//some comment
+// Add new_notebook path and new_note path since they are completely different views
 
 const Root = ({ store }) => {
 

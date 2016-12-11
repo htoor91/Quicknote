@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, hashHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 import Modal from 'react-modal';
 import { SessionModalStyle } from '../modal_styles/session_modal_styles';
 import SessionFormContainer from '../session_form/session_form_container';
@@ -35,6 +35,10 @@ class Splash extends React.Component {
   }
 
   componentWillReceiveProps(newProps){
+    this.redirectifLoggedIn();
+  }
+
+  redirectifLoggedIn(newProps) {
     if (newProps.loggedIn) {
       hashHistory.push("/home");
     }

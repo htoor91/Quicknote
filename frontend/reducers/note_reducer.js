@@ -1,10 +1,14 @@
 import { RECEIVE_NOTE, RECEIVE_NOTES, MAKE_NOTE, EDIT_NOTE, REMOVE_NOTE } from '../actions/note_actions';
 import merge from 'lodash/merge';
+import { allNotes } from './selectors';
 
-const initState = {};
+const initState = {
+  currentNote: null,
+  allNotes: []
+};
 
 const NoteReducer = (state = initState, action) => {
-  const nextState = merge({}, state);
+  let nextState = merge({}, state);
   Object.freeze(state);
 
   switch(action.type) {
@@ -12,7 +16,8 @@ const NoteReducer = (state = initState, action) => {
       nextState.currentNote = action.fetchedNote;
       return nextState;
     case RECEIVE_NOTES:
-      nextState = action.allNotes;
+      nextState = merge(nextState, action.allNotes);
+      nextState.allNotes = allNotes(action.allNotes);
       return nextState;
     case MAKE_NOTE:
       nextState[action.newNote.id] = action.newNote;
@@ -21,7 +26,7 @@ const NoteReducer = (state = initState, action) => {
       nextState[action.editedNote.id] = action.editedNote;
       return nextState;
     case REMOVE_NOTE:
-      delete nextState[action.note.id];
+      delete nextState[action.deletedNote.id];
       return nextState;
     default:
       return state;

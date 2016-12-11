@@ -54,7 +54,7 @@ export const receiveNote = (fetchedNote) => {
 
 export const receiveNotes = (allNotes) => {
   return {
-    type: RECEIVE_NOTE,
+    type: RECEIVE_NOTES,
     allNotes
   };
 };

@@ -1,0 +1,254 @@
+.sidebar-container {
+  width: 71px;
+  background: #F8F8F8;
+  height: 100vh;
+  border-right: 1px solid #ECECEC;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+  font-family: "Open Sans";
+  font-size: 12px;
+}
+
+.sidebar-container > div {
+  margin-bottom: 20px;
+  padding: 6px 0;
+  width: 36px;
+  height: 36px;
+}
+.sidebar-logo {
+  background-image: image_url("fast-forward.png");
+  background-size: 36px;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  margin-left: 18px;
+  width: 36px;
+  height: 36px;
+}
+
+
+.sidebar-container > div > button {
+  height: 36px;
+  width: 100%;
+  margin-top: -6px;
+}
+
+.addNote-button-container {
+  margin: 0 auto;
+  background-image: image_url("add-note-normal.png");
+  background-size: 36px;
+  background-repeat: no-repeat;
+  margin-top: 7px;
+  transition: all .25s ease-in-out;
+  position: relative;
+}
+
+.addNote-button-container:hover {
+  background-image: image-url("add-note-hovered.png");
+  cursor: pointer;
+}
+
+.addNote-tooltip {
+  position: absolute;
+  background: #606060;
+  color: #D9D9D9;
+  padding: 2px 5px;
+  white-space: nowrap;
+  border-radius: 2px;
+  top: 7px;
+  left: 40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.addNote-tooltip:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #606060;
+  border-width: 4px;
+  margin-top: -5px;
+}
+.addNote-button-container:hover .addNote-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+.allNotes-button-container {
+  margin: 0 auto;
+  background-image: image_url("notes-normal.png");
+  background-size: 36px;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  transition: all .25s ease-in-out;
+  position: relative;
+}
+
+.allNotes-button-container:hover {
+  background-image: image-url("notes-hovered.png");
+  cursor: pointer;
+}
+.allNotes-tooltip {
+  position: absolute;
+  background: #606060;
+  color: #D9D9D9;
+  padding: 2px 5px;
+  white-space: nowrap;
+  border-radius: 2px;
+  top: 7px;
+  left: 40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.allNotes-tooltip:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.allNotes-tooltip:after {
+  border-right-color: #606060;
+  border-width: 4px;
+  margin-top: -5px;
+}
+.allNotes-button-container:hover .allNotes-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+.notebooks-button-container {
+  margin: 0 auto;
+  background-image: image_url("notebooks-normal.png");
+  background-size: 36px;
+  background-repeat: no-repeat;
+  transition: all .25s ease-in-out;
+  position: relative;
+}
+
+.notebooks-button-container:hover {
+  background-image: image-url("notebooks-hovered.png");
+  cursor: pointer;
+}
+.notebooks-tooltip {
+  position: absolute;
+  background: #606060;
+  color: #D9D9D9;
+  padding: 2px 5px;
+  white-space: nowrap;
+  border-radius: 2px;
+  top: 7px;
+  left: 40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.notebooks-tooltip:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.notebooks-tooltip:after {
+  border-right-color: #606060;
+  border-width: 4px;
+  margin-top: -5px;
+}
+
+.notebooks-button-container:hover .notebooks-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+.tags-button-container {
+  margin: 0 auto;
+  background-image: image_url("tags-normal.png");
+  background-size: 36px;
+  background-repeat: no-repeat;
+  transition: all .25s ease-in-out;
+  position: relative;
+}
+
+.tags-button-container:hover {
+  background-image: image-url("tags-hovered.png");
+  cursor: pointer;
+}
+.tags-tooltip {
+  position: absolute;
+  background: #606060;
+  color: #D9D9D9;
+  padding: 2px 5px;
+  white-space: nowrap;
+  border-radius: 2px;
+  top: 7px;
+  left: 40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+
+
+.tags-tooltip:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.tags-tooltip:after {
+  border-right-color: #606060;
+  border-width: 4px;
+  margin-top: -5px;
+}
+.tags-button-container:hover .tags-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+
+
+
+
+.logout-button-container {
+
+}
+
+.logout-button-container:hover {
+
+}
+
+.avatar-button-container {
+
+}
+
+.avatar-button-container:hover {
+
+}

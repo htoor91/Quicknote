@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,
+html, body, div, span, button, applet, main, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -10,16 +10,45 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, textarea, {
 	margin: 0;
 	padding: 0;
 	border: 0;
   outline: 0;
   font: inherit;
+	color: inherit;
 	text-decoration: inherit;
   vertical-align: inherit;
   text-align: inherit;
   box-sizing: inherit;
-  background: transparent;
+	background: transparent;
+}
 
+ul {
+	list-style: none;
+}
+
+img {
+
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
 }

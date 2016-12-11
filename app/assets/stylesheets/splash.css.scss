@@ -1,13 +1,13 @@
-.group:after {
-  content: "";
-  clear: both;
-  display: block;
-}
+
 
 .header {
   border-bottom: 1px solid black;
   padding: 20px 10px;
   background: white;
+}
+
+.header button {
+
 }
 
 .header-left {
@@ -42,6 +42,12 @@
   margin: 10%;
 }
 
+.header button, .content button, .content input {
+  font-family: "Open Sans";
+  font-weight: bold;
+  text-align: center;
+}
+
 .content-login {
   width: 550px;
   margin: 0 auto;
@@ -49,7 +55,7 @@
 }
 
 .content-login li {
-  color: white;
+  color: orange;
   padding-bottom: 6px;
 }
 
@@ -109,7 +115,7 @@
 
 .content-login-button {
   float: left;
-  margin-left: 82px;
+  margin-left: 63px;
 }
 
 .content .top-errors li {
@@ -118,11 +124,11 @@
 
 .guest-login-button {
   float: right;
-  margin-right: 82px;
+  margin-right: 63px;
 }
 
 form li, .top-errors {
-  font-family: "Josefin Sans";
+  font-family: "Open Sans";
 }
 
 .top-errors {
