@@ -29,6 +29,7 @@ class Home extends React.Component {
       return (
         <div className="home-container">
           <SideBarContainer />
+
         </div>
       );
     } else {
