@@ -39,6 +39,18 @@ class Api::TagsController < ApplicationController
     end
   end
 
+  def destroyTagging
+    @tag = Tag.find(params[:id])
+    @tagging = @tag.taggings.select { |tagging| tagging.note_id == tag_params[:note_id] }.first
+    if @tagging
+      @tagging.destroy
+      render json: @tagging
+    else
+      render json: @tagging.errors.full_messages, status: 422
+    end
+  end
+
+
   private
 
   def tag_params
