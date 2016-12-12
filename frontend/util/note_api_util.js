@@ -18,7 +18,7 @@ const APIUtil = {
     return $.ajax({
       method: "POST",
       url: "/api/notes",
-      data: params
+      data: { note: params }
     });
   },
 
@@ -26,7 +26,7 @@ const APIUtil = {
     return $.ajax({
       method: "PATCH",
       url: `/api/notes/${note.id}`,
-      data: note
+      data: { note: note }
     });
   },
 
@@ -36,6 +36,13 @@ const APIUtil = {
       url: `/api/notes/${note.id}`
     });
   },
+
+  fetchTaggedNote(tag){
+    return $.ajax({
+      method: "GET",
+      url: `/api/tags/${tag.id}`
+    });
+  }
 
 };
 

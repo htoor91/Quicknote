@@ -4,7 +4,8 @@ import { allNotes } from './selectors';
 
 const initState = {
   currentNote: null,
-  allNotes: []
+  allNotes: [],
+  taggedNotes: []
 };
 
 const NoteReducer = (state = initState, action) => {
