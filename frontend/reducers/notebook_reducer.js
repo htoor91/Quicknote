@@ -1,4 +1,4 @@
-import { RECEIVE_NOTEBOOK, RECEIVE_NOTEBOOKS, MAKE_NOTEBOOK, EDIT_NOTEBOOK, REMOVE_NOTEBOOK } from '../actions/note_actions';
+import { RECEIVE_NOTEBOOK, RECEIVE_NOTEBOOKS, MAKE_NOTEBOOK, EDIT_NOTEBOOK, REMOVE_NOTEBOOK } from '../actions/notebook_actions';
 import merge from 'lodash/merge';
 import { allNotebooks } from './selectors';
 
