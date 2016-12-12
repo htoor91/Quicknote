@@ -1,4 +1,4 @@
-import APIUtil from '../util/notebookbook_api_util';
+import APIUtil from '../util/notebook_api_util';
 export const RECEIVE_NOTEBOOK = "RECEIVE_NOTEBOOK";
 export const RECEIVE_NOTEBOOKS = "RECEIVE_NOTEBOOKS";
 export const MAKE_NOTEBOOK = "MAKE_NOTEBOOK";
