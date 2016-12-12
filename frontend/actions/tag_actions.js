@@ -5,6 +5,7 @@ export const RECEIVE_NOTE_TAGS = "RECEIVE_NOTE_TAGS";
 export const MAKE_TAG = "MAKE_TAG";
 export const REMOVE_TAG = "REMOVE_TAG";
 export const REMOVE_TAGGING = "REMOVE_TAGGING";
+export const RECEIVE_CURRENT_TAG = "RECEIVE_CURRENT_TAG";
 
 export function fetchNoteTags(note) {
   return (dispatch) => {
@@ -51,6 +52,13 @@ export const removeTagging = (deletedTagging) => {
   return {
     type: REMOVE_TAGGING,
     deletedTagging
+  };
+};
+
+export const receiveCurrentTag = (currentTag) => {
+  return {
+    type: RECEIVE_CURRENT_TAG,
+    currentTag
   };
 };
 

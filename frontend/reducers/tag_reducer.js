@@ -1,9 +1,9 @@
-import { RECEIVE_NOTE_TAG, RECEIVE_TAGS, MAKE_TAG, REMOVE_TAG, REMOVE_TAGGING } from '../actions/tag_actions';
+import { RECEIVE_NOTE_TAG, RECEIVE_TAGS, MAKE_TAG, REMOVE_TAG, REMOVE_TAGGING, RECEIVE_CURRENT_TAG } from '../actions/tag_actions';
 import merge from 'lodash/merge';
 import { allTags } from './selectors';
 
 const initState = {
-  currentTags: null,
+  currentTag: null,
   allTags: [],
   currentNoteTags: []
 };
@@ -14,7 +14,10 @@ const TagReducer = (state = initState, action) => {
 
   switch(action.type) {
     case RECEIVE_NOTE_TAG:
-      nextState.currentTags = action.fetchedNoteTags;
+      nextState.currentNoteTags = action.fetchedNoteTags;
+      return nextState;
+    case RECEIVE_CURRENT_TAG:
+      nextState.currentTag = action.receiveCurrentTag;
       return nextState;
     case RECEIVE_TAGS:
       nextState = merge(nextState, action.allTags);
@@ -24,7 +27,7 @@ const TagReducer = (state = initState, action) => {
       nextState[action.newTag.id] = action.newTag;
       return nextState;
     case REMOVE_TAGGING:
-      // TODO 
+      // TODO
       return nextState;
     case REMOVE_TAG:
       delete nextState[action.deletedTag.id];
