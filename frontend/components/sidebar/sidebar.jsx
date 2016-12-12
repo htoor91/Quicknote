@@ -24,23 +24,29 @@ class Sidebar extends React.Component {
   }
 
   addNoteHandler() {
-
+    const notebookId = this.props.currentNotebook ?
+                       this.props.currentNotbook.id :
+                       this.props.notebooks[0].id;
+    const initialNote = { title: "", body: "", notebookId: notebookId };
+    this.props.createNote(initialNote);
   }
 
   allNotesHandler() {
-
+    // No current notebook/tag, since all notes are to be listed
+    this.props.setCurrentNotebook(null);
+    this.props.setCurrentTag(null);
   }
 
   notebooksHandler() {
-
+    this.toggleNotebookDrawer();
   }
 
   tagsHandler() {
-
+    this.toggleTagsDrawer();
   }
 
   avatarHandler() {
-
+    // Pop up modal
   }
 
   toggleNotebookDrawer() {
