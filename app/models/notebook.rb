@@ -1,28 +1,30 @@
 # == Schema Information
 #
-# Table name: notes
+# Table name: notebooks
 #
 #  id          :integer          not null, primary key
-#  title       :string
-#  body        :text
+#  title       :string           not null
+#  description :string
 #  author_id   :integer          not null
-#  notebook_id :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
-class Note < ActiveRecord::Base
+class Notebook < ActiveRecord::Base
+
+  validates :title, :author_id, presence: true
+
   belongs_to(
-    :author,
+    :user,
     class_name: :User,
     primary_key: :id,
     foreign_key: :author_id
   )
-  belongs_to :notebook
-  has_many :taggings
-  has_many :tags, through: :taggings, source: :tag
 
-  validates :author, :notebook, presence: true
+  has_many :notes, dependent: :destroy
+
+
+
 
 
 end

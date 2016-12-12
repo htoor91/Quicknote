@@ -16,11 +16,19 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
 
   after_initialize :ensure_session_token
+  after_create :ensure_default_notebook
   before_validation :ensure_session_token_uniqueness
 
   has_many(
     :notes,
     class_name: :Note,
+    primary_key: :id,
+    foreign_key: :author_id
+  )
+
+  has_many(
+    :notebooks,
+    class_name: :Notebook,
     primary_key: :id,
     foreign_key: :author_id
   )
@@ -63,4 +71,8 @@ class User < ActiveRecord::Base
 			self.session_token = User.generate_session_token
 		end
 	end
+
+  def ensure_default_notebook
+    Notebook.create!( title: "Personal Notebook", description: "This is your default notebook. Populate it with your notes!", author_id: self.id)
+  end
 end
