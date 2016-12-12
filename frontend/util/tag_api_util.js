@@ -1,5 +1,5 @@
 const APIUtil = {
-  fetchAllTags() {
+  fetchTags() {
     return $.ajax({
       method: "GET",
       url: "/api/tags"

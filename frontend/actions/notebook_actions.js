@@ -1,13 +1,13 @@
-import APIUtil from '../util/notebook_api_util';
+import APIUtil from '../util/notebookbook_api_util';
 export const RECEIVE_NOTEBOOK = "RECEIVE_NOTEBOOK";
 export const RECEIVE_NOTEBOOKS = "RECEIVE_NOTEBOOKS";
 export const MAKE_NOTEBOOK = "MAKE_NOTEBOOK";
 export const EDIT_NOTEBOOK = "EDIT_NOTEBOOK";
 export const REMOVE_NOTEBOOK = "REMOVE_NOTEBOOK";
 
-export function fetchNotebook(note) {
+export function fetchNotebook(notebook) {
   return (dispatch) => {
-    return APIUtil.fetchNotebook(note).then(
+    return APIUtil.fetchNotebook(notebook).then(
       (fetchedNotebook) => dispatch(receiveNotebook(fetchedNotebook))
     );
   };
@@ -21,25 +21,25 @@ export function fetchNotebooks() {
   };
 }
 
-export function createNotebook(noteParams) {
+export function createNotebook(notebookParams) {
   return (dispatch) => {
-    return APIUtil.createNotebook(noteParams).then(
+    return APIUtil.createNotebook(notebookParams).then(
       (newNotebook) => dispatch(makeNotebook(newNotebook))
     );
   };
 }
 
-export function updateNotebook(noteParams) {
+export function updateNotebook(notebookParams) {
   return (dispatch) => {
-    return APIUtil.updateNotebook(noteParams).then(
+    return APIUtil.updateNotebook(notebookParams).then(
       (editedNotebook) => dispatch(editNotebook(editedNotebook))
     );
   };
 }
 
-export function deleteNotebook(note) {
+export function deleteNotebook(notebook) {
   return (dispatch) => {
-    return APIUtil.deleteNotebook(note).then(
+    return APIUtil.deleteNotebook(notebook).then(
       (deletedNotebook) => dispatch(removeNotebook(deletedNotebook))
     );
   };
