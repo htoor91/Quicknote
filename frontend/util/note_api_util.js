@@ -37,7 +37,7 @@ const APIUtil = {
     });
   },
 
-  fetchTaggedNote(tag){
+  fetchTaggedNotes(tag){
     return $.ajax({
       method: "GET",
       url: `/api/tags/${tag.id}`

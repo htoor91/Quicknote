@@ -17,7 +17,7 @@ const APIUtil = {
     return $.ajax({
       method: "POST",
       url: "/api/tags/",
-      data: {tag: {name: tag, note_id: noteId}}
+      data: {tag: {tag_name: tag, note_id: noteId}}
     });
   },
 
