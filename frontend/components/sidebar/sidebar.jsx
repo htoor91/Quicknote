@@ -1,5 +1,7 @@
 import React from 'react';
 import Drawer from 'react-motion-drawer';
+import NotebookIndexContainer from '../notebooks/notebooks_index_container';
+import TagsIndexContainer from '../tags/tags_index_container';
 
 
 
@@ -78,6 +80,11 @@ class Sidebar extends React.Component {
   }
 
   render() {
+    const style = {
+      background: 'white',
+      boxShadow: 'rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px'
+    };
+
     return(
       <div className="sidebar-container">
 
@@ -106,6 +113,23 @@ class Sidebar extends React.Component {
           <button className="avatar-button" onClick={this.avatarHandler}></button>
         </div>
 
+        <Drawer
+          className="notebooks-drawer"
+          drawerStyle={style}
+          open={this.state.notebookDrawerOpen}
+          onChange={open => this.setState({ notebookDrawerOpen: open})}
+          width={420}>
+          <NotebookIndexContainer closeNotebookDrawer={ this.closeNotebookDrawer }/>
+        </Drawer>
+
+        <Drawer
+          className="tags-drawer"
+          drawerStyle={style}
+          open={this.state.tagsDrawerOpen}
+          onChange={open => this.setState({ tagsDrawerOpen: open})}
+          width={420}>
+          <TagsIndexContainer closeTagsDrawer={ this.closeTagsDrawer }/>
+        </Drawer>
 
       </div>
     );
