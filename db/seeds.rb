@@ -19,3 +19,7 @@ note2 = Note.create!(title: "Favorite song", body: "Scar Tissue by RHCP", author
 note3 = Note.create!(title: "TODO", body: "Win the lottery", author_id: guest.id, notebook_id: guest.notebooks.first.id)
 tag1 = Tag.create!(tag_name: "todos")
 tagging1 = Tagging.create!(note_id: note3.id, tag_id: tag1.id)
+
+second_notebook = Notebook.create!(title: "My Second Notebook", description: "Something", author_id: guest.id)
+note3 = Note.create!(title: "Random Note", body: "Some stuff", author_id: guest.id, notebook_id: second_notebook.id)
+note4 = Note.create!(title: "Another note", body: "More stuff", author_id: guest.id, notebook_id: second_notebook.id)
