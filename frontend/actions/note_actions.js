@@ -4,6 +4,7 @@ export const RECEIVE_NOTES = "RECEIVE_NOTES";
 export const MAKE_NOTE = "MAKE_NOTE";
 export const EDIT_NOTE = "EDIT_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
+export const RECEIVE_TAGGED_NOTES = "RECEIVE_TAGGED_NOTES";
 
 export function fetchNote(note) {
   return (dispatch) => {
@@ -44,6 +45,21 @@ export function deleteNote(note) {
     );
   };
 }
+
+export function fetchTaggedNotes(tag) {
+  return (dispatch) => {
+    return APIUtil.fetchTaggedNotes(tag).then(
+      (fetchedNotes) => dispatch(receiveTaggedNotes(fetchedNotes))
+    );
+  };
+}
+
+export const receiveTaggedNotes = (fetchedNotes) => {
+  return {
+    type: RECEIVE_TAGGED_NOTES,
+    fetchedNotes
+  };
+};
 
 export const receiveNote = (fetchedNote) => {
   return {
