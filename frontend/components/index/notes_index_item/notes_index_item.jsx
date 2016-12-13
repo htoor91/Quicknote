@@ -123,13 +123,13 @@ class NotesIndexItem extends React.Component {
         <Modal
           isOpen={this.state.deleteModalOpen}
           onRequestClose={this.closeDeleteModal}
-          style={ deleteModalStyle }>
+          style={ deleteModalStyle }
+          contentLabel="Note index item delete modal">
 
           <DeleteNoteModal
             deleteNote={this.deleteHandler}
             closeModal={this.closeDeleteModal}
-            noteTitle={this.props.note.title}
-            contentLabel="Note index item delete modal"/>
+            noteTitle={this.props.note.title} />
         </Modal>
 
       </li>
