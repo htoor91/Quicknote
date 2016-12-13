@@ -23,6 +23,7 @@ class TagsIndex extends React.Component {
   }
 
   renderTags() {
+    // TODO cleanup render tags
     return(
       <div className="tags-index-list">
         {this.props.tags.map((tag) => (
@@ -37,9 +38,9 @@ class TagsIndex extends React.Component {
 
   render() {
     return (
-      <div className="tag-index-container">
-        <div className="tag-index-header">
-          <div className="tag-index-title">TAGS</div>
+      <div className="drawer-index-container">
+        <div className="drawer-index-header">
+          <div className="drawer-index-title">TAGS</div>
         </div>
         { this.renderTags() }
       </div>

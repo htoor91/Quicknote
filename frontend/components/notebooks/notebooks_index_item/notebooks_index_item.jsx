@@ -61,7 +61,7 @@ class NotebooksIndexItem extends React.Component {
   render() {
     const itemClassName = (this.props.currentNotebook &&
                           (this.props.notebook.id === this.props.currentNotebook.id)) ?
-                          "notebook-item-li selectedNotebook" : "notebook-item-li";
+                          "notebook-index-item-li selectedNotebook" : "notebook-index-item-li";
 
     const deleteButtonClassName = (this.props.notebooks.length > 1) ?
                                   "delete-notebook-button" : "delete-notebook-button default-notebook";

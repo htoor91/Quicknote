@@ -62,9 +62,9 @@ class NotebooksIndex extends React.Component {
     };
 
     return(
-      <div className="notebook-index-container">
-        <div className="notebook-index-header">
-          <div className="notebook-index-title">
+      <div className="drawer-index-container">
+        <div className="drawer-index-header">
+          <div className="drawer-index-title">
             NOTEBOOKS
           </div>
 
