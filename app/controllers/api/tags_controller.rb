@@ -23,7 +23,7 @@ class Api::TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.find_or_create_by(name: tag_params[:name])
+    @tag = Tag.find_or_create_by(tag_name: tag_params[:tag_name])
     @tagging = Tagging.find_or_create_by(note_id: tag_params[:note_id], tag_id: @tag.id)
 
     render json: @tag
@@ -54,6 +54,6 @@ class Api::TagsController < ApplicationController
   private
 
   def tag_params
-    params.require(:tag).permit(:name, :note_id)
+    params.require(:tag).permit(:tag_name, :note_id)
   end
 end
