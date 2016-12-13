@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
     logout: () => dispatch(logout()),
     fetchNotes: () => dispatch(fetchNotes()),
     setCurrentNote: (note) => dispatch(fetchNote()),
-    createNote: (note) => dispatch(createNote()),
+    createNote: (note) => dispatch(createNote(note)),
     fetchNotebooks: () => dispatch(fetchNotebooks()),
     setCurrentNotebook: (notebook) => dispatch(fetchNotebook(notebook)),
     createNotebook: (notebook) => dispatch(createNotebook(notebook)),
