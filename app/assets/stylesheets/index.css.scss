@@ -1,0 +1,121 @@
+.index-container {
+  flex-shrink: 0;
+  width: 350px;
+  height: 100vh;
+  background: white;
+  border-right: 1px solid #ececec;
+  overflow: hidden;
+}
+
+.index-header {
+  font-family: 'Raleway';
+  color: #999999;
+  height: 80px;
+  padding: 24px 15px 0 24px;
+  border-bottom: 1px solid #ececec;
+
+}
+
+.index-header-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 22px;
+  width: 300px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.index-header-count {
+  font-family: "Martel";
+  font-size: 14px;
+  color: #bfbfbf;
+  letter-spacing: 1px;
+  margin-top: 23px;
+}
+
+.notes-index-list {
+  height: 87vh;
+  overflow-y: scroll;
+}
+
+.notes-index-list > div > ul > .selected {
+  border: 3px solid #d9d9d9;
+  padding: 10px 22px;
+}
+
+.note-index-item-li {
+  height: 100px;
+  padding: 13px 25px;
+  border-bottom: 1px solid #ececec;
+  transition: background .2s ease-in-out;
+  color: #999999;
+}
+
+.note-index-item-li:hover {
+  color: #ffffff;
+  background: #40BC6C;
+  cursor: pointer;
+}
+
+.note-index-item-li:hover .note-index-item-title{
+  color: #ffffff;
+}
+
+.note-index-item-li:hover .empty-title{
+  color: #ffffff;
+  opacity: 1;
+}
+
+.note-index-item-li:hover .last-updated{
+  color: #ffffff;
+}
+
+.note-index-item-title {
+  font-size: 16px;
+  font-family: 'Martel';
+  color: #595959;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: bold;
+
+}
+
+.empty-title {
+  opacity: .5;
+  color: #999999;
+}
+
+.last-updated {
+  font-size: 10px;
+  font-family: 'Open Sans';
+  color: #bfbfbf;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.note-index-item-body {
+  padding-top: 20px;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  color:inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.delete-note-button{
+  float: right;
+  height: 25px;
+  width: 25px;
+  background-size: 25px 25px;
+  margin-top: -20px;
+  background-image: image-url("delete-note-unclicked.png");
+}
+
+.delete-note-button:hover {
+  background-image: image-url("delete-note-clicked.png");
+}
