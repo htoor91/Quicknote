@@ -1,0 +1,7 @@
+text body: Open Sans or Raleway (Gotham clone) (sans), play around with font-weight.
+text/note title: Martel (serif)
+
+
+Colors: Evernote Green: 40BC6C, darkgrey: 595959
+Light borders: ECECEC
+sidebar: grey F8F8F8
