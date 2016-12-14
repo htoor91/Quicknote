@@ -1,12 +1,12 @@
 .note-container {
   height: 60vh;
-  width: 60vw;
+  width: 100%;
   padding: 0 20px 20px 20px;
 }
 
 
 .note-header-container {
-  max-width: 800px;
+  max-width: 940px;
   margin: 0 auto;
   padding: 10px 20px 10px 20px;
   font-family: 'Martel';
@@ -16,7 +16,7 @@
 }
 
 .note-form-container {
-  max-width: 840px;
+  max-width: 965px;
   margin: 0 auto;
 }
 
@@ -48,7 +48,7 @@
   display: flex;
   padding: 5px 20px 20px 20px;
   flex-wrap: nowrap;
-  max-width: 800px;
+  // max-width: 800px;
   margin: 0 auto;
   justify-content: flex-start;
 }
