@@ -75,6 +75,7 @@ class NotesIndexItem extends React.Component {
   }
 
   render() {
+    // TODO search for all modal styles and change
     const deleteModalStyle = {
       overlay: {
         position: 'fixed',
