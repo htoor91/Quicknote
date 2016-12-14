@@ -22,6 +22,7 @@ const NoteReducer = (state = initState, action) => {
       return nextState;
     case MAKE_NOTE:
       nextState[action.newNote.id] = action.newNote;
+      nextState.allNotes.unshift(action.newNote);
       return nextState;
     case EDIT_NOTE:
       nextState[action.editedNote.id] = action.editedNote;
