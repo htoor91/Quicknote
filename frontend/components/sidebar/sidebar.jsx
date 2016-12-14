@@ -37,10 +37,13 @@ class Sidebar extends React.Component {
 
   addNoteHandler() {
     const notebookId = this.props.currentNotebook ?
-                       this.props.currentNotbook.id :
+                       this.props.currentNotebook.id :
                        this.props.notebooks[0].id;
     const initialNote = { title: "", body: "", notebook_id: notebookId };
     this.props.createNote(initialNote);
+    if (this.props.currentTag) {
+      this.allNotesHandler();
+    }
   }
 
   allNotesHandler() {
@@ -65,7 +68,8 @@ class Sidebar extends React.Component {
     const toggledValue = !this.state.notebookDrawerOpen;
 
     this.setState({
-      notebookDrawerOpen: toggledValue
+      notebookDrawerOpen: toggledValue,
+      tagsDrawerOpen: false
     });
   }
 
@@ -79,7 +83,8 @@ class Sidebar extends React.Component {
     const toggledValue = !this.state.tagsDrawerOpen;
 
     this.setState({
-      tagsDrawerOpen: toggledValue
+      tagsDrawerOpen: toggledValue,
+      notebookDrawerOpen: false
     });
   }
 

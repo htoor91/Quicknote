@@ -31,6 +31,8 @@ class CreateNotebookModal extends React.Component {
       };
       this.props.createNotebook(notebook);
       this.props.closeModal();
+      this.props.closeDrawer();
+      
     }
   }
 

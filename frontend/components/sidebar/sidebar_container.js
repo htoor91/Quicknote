@@ -11,7 +11,8 @@ const mapStateToProps = ( state ) => {
     currentUser: state.session.currentUser,
     notes: state.notes.allNotes,
     notebooks: state.notebooks.allNotebooks,
-    currentNotebook: state.notebooks.currentNotebook
+    currentNotebook: state.notebooks.currentNotebook,
+    currentTag: state.tags.currentTag
   });
 };
 

@@ -86,7 +86,8 @@ class NotebooksIndex extends React.Component {
             contentLabel="Create notebook modal">
 
             <CreateNotebookContainer
-              closeModal={this.closeNotebookModal} />
+              closeModal={this.closeNotebookModal}
+              closeDrawer={this.props.closeNotebookDrawer}/>
           </Modal>
 
 

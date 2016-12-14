@@ -22,6 +22,8 @@ const NotebookReducer = (state = initState, action) => {
       return nextState;
     case MAKE_NOTEBOOK:
       nextState[action.newNotebook.id] = action.newNotebook;
+      nextState.allNotebooks.push(action.newNotebook);
+      nextState.currentNotebook = action.newNotebook;
       return nextState;
     case EDIT_NOTEBOOK:
       nextState[action.editedNotebook.id] = action.editedNotebook;
