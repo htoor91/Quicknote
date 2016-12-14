@@ -9,7 +9,7 @@ const mapStateToProps = state => {
     notes: state.notes.allNotes,
     notebooks: state.notebooks.allNotebooks,
     currentNotebook: state.notebooks.currentNotebook,
-    taggedNoted: state.notes.taggedNotes,
+    taggedNotes: state.notes.taggedNotes,
     currentTag: state.tags.currentTag
   });
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
 import Modal from 'react-modal';
-import TagFormContainer from '../tags/tag_form/tag_form_container';
-import NotebookSelectContainer from '../notebooks/notebook_select/notebook_select_container';
+// import TagFormContainer from '../tags/tag_form/tag_form_container';
+// import NotebookSelectContainer from '../notebooks/notebook_select/notebook_select_container';
 import DeleteNoteModal from './delete_note';
 
 class Note extends React.Component {
@@ -22,7 +22,6 @@ class Note extends React.Component {
     this.deleteHandler = this.deleteHandler.bind(this);
     this.openDeleteModal = this.openDeleteModal.bind(this);
     this.closeDeleteModal = this.closeDeleteModal.bind(this);
-    this.renderUser = this.renderUser.bind(this);
   }
 
   componentWillReceiveProps(nextProps){
@@ -36,7 +35,7 @@ class Note extends React.Component {
           }
         }
         this.setState(nextProps.currentNote);
-        this.props.requestNotesTags(nextProps.currentNote);
+        this.props.fetchNoteTags(nextProps.currentNote);
       }
     }
 
@@ -122,6 +121,11 @@ class Note extends React.Component {
     } else {
       return(
         <div className='note-container'>
+
+          <div className="note-tools-container">
+            <h1> TOOLS GO HERE </h1>
+          </div>
+
           <div className="note-header-container">
             <input
               className="note-title-form"
@@ -130,11 +134,6 @@ class Note extends React.Component {
               onChange={this.titleChangeHandler}
               value={this.state.title} />
           </div>
-
-          <div className="note-tools-container">
-            <h1> TOOLS GO HERE </h1>
-          </div>
-
           <div className="note-form-container">
             <ReactQuill
               ref='editor'

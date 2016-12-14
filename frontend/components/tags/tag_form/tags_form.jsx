@@ -28,7 +28,7 @@ class TagForm extends React.Component {
     // this.props.deleteTagging(this.props.tags[idx], this.props.note.id);
     this.refreshTags();
     if (this.props.selectedTag){
-      if (this.props.selectedTag.name === this.props.tags[idx].name){
+      if (this.props.selectedTag.tag_name === this.props.tags[idx].name){
         this.props.fetchTaggedNotes(this.props.selectedTag);
       }
     }
@@ -38,7 +38,7 @@ class TagForm extends React.Component {
     this.props.createTag(tag, this.props.note.id);
     this.refreshTags();
     if (this.props.selectedTag){
-      if (this.props.selectedTag.name === tag){
+      if (this.props.selectedTag.tag_name === tag){
         this.props.fetchTaggedNotes(this.props.selectedTag);
       }
     }

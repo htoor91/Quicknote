@@ -92,7 +92,7 @@ class Sidebar extends React.Component {
   render() {
     const style = {
       background: 'white',
-      boxShadow: 'rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px'
+      zIndex: 1
     };
 
     return(
@@ -128,7 +128,9 @@ class Sidebar extends React.Component {
           drawerStyle={style}
           open={this.state.notebookDrawerOpen}
           onChange={open => this.setState({ notebookDrawerOpen: open})}
-          width={420}>
+          width={420}
+          offset={72}
+          config={[400,50]}>
           <NotebookIndexContainer closeNotebookDrawer={ this.closeNotebookDrawer }/>
         </Drawer>
 

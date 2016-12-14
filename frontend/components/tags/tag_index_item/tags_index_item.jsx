@@ -52,7 +52,8 @@ class TagsIndexItem extends React.Component {
   render(){
     return(
       <div className="tag-index-item-container" onClick={ this.selectTagHandler }>
-        <div className="tag-index-item-name">{ this.props.tag.name }</div>
+        <div className="tag-index-item-name">{ this.props.tag.tag_name }</div>
+        <div className="tag-index-item-count"></div>
 
         <button
           className="tag-index-item-delete-button"

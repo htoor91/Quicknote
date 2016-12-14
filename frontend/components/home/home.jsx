@@ -4,6 +4,8 @@ import SideBarContainer from '../sidebar/sidebar_container';
 import IndexContainer from '../index/index_container';
 import NoteContainer from '../note/note_container';
 
+
+
 class Home extends React.Component {
   constructor(props){
     super(props);
@@ -25,6 +27,7 @@ class Home extends React.Component {
     }
   }
 
+  // TODO: add loading bar
   render(){
 
     if (this.props.loggedIn) {
@@ -32,6 +35,7 @@ class Home extends React.Component {
         <div className="home-container">
           <SideBarContainer />
           <IndexContainer />
+          <NoteContainer />
         </div>
       );
     } else {
