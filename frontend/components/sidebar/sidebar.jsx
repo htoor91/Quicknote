@@ -92,8 +92,11 @@ class Sidebar extends React.Component {
   render() {
     const style = {
       background: 'white',
-      zIndex: 1
+      zIndex: 1,
+      marginTop: "-6px",
     };
+    const offsetNotebook = (this.state.notebookDrawerOpen) ? 72 : 0;
+    const offsetTag = (this.state.tagsDrawerOpen) ? 72 : 0;
 
     return(
       <div className="sidebar-container">
@@ -129,7 +132,7 @@ class Sidebar extends React.Component {
           open={this.state.notebookDrawerOpen}
           onChange={open => this.setState({ notebookDrawerOpen: open})}
           width={420}
-          offset={72}
+          offset={offsetNotebook}
           config={[400,50]}>
           <NotebookIndexContainer closeNotebookDrawer={ this.closeNotebookDrawer }/>
         </Drawer>
@@ -139,7 +142,9 @@ class Sidebar extends React.Component {
           drawerStyle={style}
           open={this.state.tagsDrawerOpen}
           onChange={open => this.setState({ tagsDrawerOpen: open})}
-          width={420}>
+          width={420}
+          offset={offsetTag}
+          config={[400,50]}>
           <TagsIndexContainer closeTagsDrawer={ this.closeTagsDrawer }/>
         </Drawer>
 
