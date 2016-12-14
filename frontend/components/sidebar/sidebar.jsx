@@ -19,6 +19,16 @@ class Sidebar extends React.Component {
     this.notebooksHandler = this.notebooksHandler.bind(this);
     this.tagsHandler = this.tagsHandler.bind(this);
     this.avatarHandler = this.avatarHandler.bind(this);
+    this.toggleNotebookDrawer = this.toggleNotebookDrawer.bind(this);
+    this.closeNotebookDrawer = this.closeNotebookDrawer.bind(this);
+    this.toggleTagsDrawer = this.toggleTagsDrawer.bind(this);
+    this.closeTagsDrawer = this.closeTagsDrawer.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.notes.length > this.props.notes.length) {
+      this.props.setCurrentNote(nextProps.notes[0]);
+    }
   }
 
   logoutHandler() {

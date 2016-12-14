@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import NotebooksIndex from './notebooks_index';
-import { fetchNotebook, deleteNotebook } from '../../actions/notebook_actions';
+import { setCurrentNotebook, deleteNotebook } from '../../actions/notebook_actions';
 
 const mapStateToProps = (state) => {
   return ({
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return ({
-    setCurrentNotebook: (notebook) => dispatch(fetchNotebook(notebook)),
+    setCurrentNotebook: (notebook) => dispatch(setCurrentNotebook(notebook)),
     closeNotebookDrawer: ownProps.closeNotebookDrawer
   });
 };

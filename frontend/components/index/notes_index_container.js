@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import NotesIndex from './notes_index';
-import { fetchNote } from '../../actions/note_actions';
+import { setCurrentNote } from '../../actions/note_actions';
 
 const mapStateToProps = ( state, ownProps ) => {
   return ({
@@ -11,7 +11,7 @@ const mapStateToProps = ( state, ownProps ) => {
 
 const mapDispatchToProps = (dispatch) => {
   return ({
-    setCurrentNote: (note) => dispatch(fetchNote(note))
+    setCurrentNote: (note) => dispatch(setCurrentNote(note))
   });
 };
 

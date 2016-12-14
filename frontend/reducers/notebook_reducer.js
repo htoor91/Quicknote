@@ -1,4 +1,4 @@
-import { RECEIVE_NOTEBOOK, RECEIVE_NOTEBOOKS, MAKE_NOTEBOOK, EDIT_NOTEBOOK, REMOVE_NOTEBOOK } from '../actions/notebook_actions';
+import { RECEIVE_NOTEBOOK, RECEIVE_NOTEBOOKS, MAKE_NOTEBOOK, EDIT_NOTEBOOK, REMOVE_NOTEBOOK, SET_CURRENT_NOTEBOOK} from '../actions/notebook_actions';
 import merge from 'lodash/merge';
 import { allNotebooks } from './selectors';
 
@@ -28,6 +28,9 @@ const NotebookReducer = (state = initState, action) => {
       return nextState;
     case REMOVE_NOTEBOOK:
       delete nextState[action.deletedNotebook.id];
+      return nextState;
+    case SET_CURRENT_NOTEBOOK:
+      nextState.currentNotebook = action.newCurrentNotebook;
       return nextState;
     default:
       return state;

@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import NotebooksIndexItem from './notebooks_index_item';
-import { fetchNote, fetchNotes } from '../../../actions/note_actions';
-import { fetchNotebook, createNotebook, deleteNotebook } from '../../../actions/notebook_actions';
-import { receiveCurrentTag } from '../../../actions/tag_actions';
+import { setCurrentNote, fetchNotes } from '../../../actions/note_actions';
+import { setCurrentNotebook, createNotebook, deleteNotebook } from '../../../actions/notebook_actions';
+import { setCurrentTag } from '../../../actions/tag_actions';
 
 const mapStateToProps = state => {
   return ({
@@ -16,11 +16,11 @@ const mapStateToProps = state => {
 const mapDispatchToProps = ( dispatch, ownProps ) => {
   return ({
     fetchNotes: () => dispatch(fetchNotes()),
-    setCurrentNote: (note) => dispatch(fetchNote(note)),
+    setCurrentNote: (note) => dispatch(setCurrentNote(note)),
     createNotebook: (notebook) => dispatch(createNotebook(notebook)),
     deleteNotebook: (notebook) => dispatch(deleteNotebook(notebook)),
-    setCurrentNotebook: (notebook) => dispatch(fetchNotebook(notebook)),
-    setCurrentTag: (tag) => dispatch(receiveCurrentTag(tag))
+    setCurrentNotebook: (notebook) => dispatch(setCurrentNotebook(notebook)),
+    setCurrentTag: (tag) => dispatch(setCurrentTag(tag))
   });
 };
 

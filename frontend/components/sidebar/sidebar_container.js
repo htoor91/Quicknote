@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import Sidebar from './sidebar';
-import { fetchNote, fetchNotes, createNote, updateNote, deleteNote } from '../../actions/note_actions';
-import { fetchNotebooks, fetchNotebook, createNotebook } from '../../actions/notebook_actions';
-import { receiveCurrentTag } from '../../actions/tag_actions';
+import { setCurrentNote, fetchNotes, createNote, updateNote, deleteNote } from '../../actions/note_actions';
+import { fetchNotebooks, setCurrentNotebook, createNotebook } from '../../actions/notebook_actions';
+import { setCurrentTag } from '../../actions/tag_actions';
 import { logout } from '../../actions/session_actions';
 
 
@@ -19,12 +19,12 @@ const mapDispatchToProps = (dispatch) => {
   return ({
     logout: () => dispatch(logout()),
     fetchNotes: () => dispatch(fetchNotes()),
-    setCurrentNote: (note) => dispatch(fetchNote()),
+    setCurrentNote: (note) => dispatch(setCurrentNote(note)),
     createNote: (note) => dispatch(createNote(note)),
     fetchNotebooks: () => dispatch(fetchNotebooks()),
-    setCurrentNotebook: (notebook) => dispatch(fetchNotebook(notebook)),
+    setCurrentNotebook: (notebook) => dispatch(setCurrentNotebook(notebook)),
     createNotebook: (notebook) => dispatch(createNotebook(notebook)),
-    setCurrentTag: (tag) => dispatch(receiveCurrentTag(tag))
+    setCurrentTag: (tag) => dispatch(setCurrentTag(tag))
 
   });
 };

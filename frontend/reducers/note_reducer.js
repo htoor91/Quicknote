@@ -1,4 +1,4 @@
-import { RECEIVE_NOTE, RECEIVE_NOTES, MAKE_NOTE, EDIT_NOTE, REMOVE_NOTE, RECEIVE_TAGGED_NOTES } from '../actions/note_actions';
+import { RECEIVE_NOTE, RECEIVE_NOTES, MAKE_NOTE, EDIT_NOTE, REMOVE_NOTE, RECEIVE_TAGGED_NOTES, SET_CURRENT_NOTE } from '../actions/note_actions';
 import merge from 'lodash/merge';
 import { allNotes } from './selectors';
 
@@ -31,6 +31,9 @@ const NoteReducer = (state = initState, action) => {
       return nextState;
     case RECEIVE_TAGGED_NOTES:
       nextState.taggedNotes = action.fetchedNotes;
+      return nextState;
+    case SET_CURRENT_NOTE:
+      nextState.currentNote = action.newCurrentNote;
       return nextState;
     default:
       return state;

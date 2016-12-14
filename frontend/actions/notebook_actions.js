@@ -4,6 +4,7 @@ export const RECEIVE_NOTEBOOKS = "RECEIVE_NOTEBOOKS";
 export const MAKE_NOTEBOOK = "MAKE_NOTEBOOK";
 export const EDIT_NOTEBOOK = "EDIT_NOTEBOOK";
 export const REMOVE_NOTEBOOK = "REMOVE_NOTEBOOK";
+export const SET_CURRENT_NOTEBOOK = "SET_CURRENT_NOTEBOOK";
 
 export function fetchNotebook(notebook) {
   return (dispatch) => {
@@ -44,6 +45,13 @@ export function deleteNotebook(notebook) {
     );
   };
 }
+
+export const setCurrentNotebook = (newCurrentNotebook) => {
+  return {
+    type: SET_CURRENT_NOTEBOOK,
+    newCurrentNotebook
+  };
+};
 
 export const receiveNotebook = (fetchedNotebook) => {
   return {

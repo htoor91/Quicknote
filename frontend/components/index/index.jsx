@@ -8,7 +8,7 @@ class Index extends React.Component {
   render(){
     let count;
     let title;
-    let notes;
+    let notes = this.props.notes;
     if (this.props.currentNotebook){
       title = this.props.currentNotebook.title;
       notes = notes.filter( (note) => note.notebook_id === this.props.currentNotebook.id )
@@ -19,7 +19,6 @@ class Index extends React.Component {
       count = notes.length;
     } else {
       title = "NOTES";
-      notes = this.props.notes;
       count = this.props.notes.length;
     }
 

@@ -25,7 +25,7 @@ class TagForm extends React.Component {
   }
 
   deleteHandler(idx){
-    this.props.deleteTagging(this.props.tags[idx], this.props.note.id);
+    // this.props.deleteTagging(this.props.tags[idx], this.props.note.id);
     this.refreshTags();
     if (this.props.selectedTag){
       if (this.props.selectedTag.name === this.props.tags[idx].name){

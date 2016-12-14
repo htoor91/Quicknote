@@ -4,8 +4,8 @@ export const RECEIVE_TAGS = "RECEIVE_TAGS";
 export const RECEIVE_NOTE_TAGS = "RECEIVE_NOTE_TAGS";
 export const MAKE_TAG = "MAKE_TAG";
 export const REMOVE_TAG = "REMOVE_TAG";
-export const REMOVE_TAGGING = "REMOVE_TAGGING";
-export const RECEIVE_CURRENT_TAG = "RECEIVE_CURRENT_TAG";
+// export const REMOVE_TAGGING = "REMOVE_TAGGING";
+export const SET_CURRENT_TAG = "SET_CURRENT_TAG";
 
 export function fetchNoteTags(note) {
   return (dispatch) => {
@@ -40,25 +40,25 @@ export function deleteTag(tag) {
   };
 }
 
-export function deleteTagging(tag, noteId) {
-  return (dispatch) => {
-    return APIUtil.deleteTagging(tag, noteId).then(
-      (deletedTagging) => dispatch(removeTagging(deletedTagging))
-    );
-  };
-}
+// export function deleteTagging(tag, noteId) {
+//   return (dispatch) => {
+//     return APIUtil.deleteTagging(tag, noteId).then(
+//       (deletedTagging) => dispatch(removeTagging(deletedTagging))
+//     );
+//   };
+// }
 
-export const removeTagging = (deletedTagging) => {
-  return {
-    type: REMOVE_TAGGING,
-    deletedTagging
-  };
-};
+// export const removeTagging = (deletedTagging) => {
+//   return {
+//     type: REMOVE_TAGGING,
+//     deletedTagging
+//   };
+// };
 
-export const receiveCurrentTag = (currentTag) => {
+export const setCurrentTag = (newCurrentTag) => {
   return {
-    type: RECEIVE_CURRENT_TAG,
-    currentTag
+    type: SET_CURRENT_TAG,
+    newCurrentTag
   };
 };
 

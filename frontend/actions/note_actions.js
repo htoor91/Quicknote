@@ -5,6 +5,7 @@ export const MAKE_NOTE = "MAKE_NOTE";
 export const EDIT_NOTE = "EDIT_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
 export const RECEIVE_TAGGED_NOTES = "RECEIVE_TAGGED_NOTES";
+export const SET_CURRENT_NOTE = "SET_CURRENT_NOTE";
 
 export function fetchNote(note) {
   return (dispatch) => {
@@ -53,6 +54,13 @@ export function fetchTaggedNotes(tag) {
     );
   };
 }
+
+export const setCurrentNote = (newCurrentNote) => {
+  return {
+    type: SET_CURRENT_NOTE,
+    newCurrentNote
+  };
+};
 
 export const receiveTaggedNotes = (fetchedNotes) => {
   return {

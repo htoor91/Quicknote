@@ -1,9 +1,9 @@
 
 import { connect } from 'react-redux';
 import TagsIndexItem from './tags_index_item';
-import { fetchTaggedNotes, fetchNote } from '../../../actions/note_actions';
-import { fetchNotebook } from '../../../actions/notebook_actions';
-import { receiveCurrentTag, deleteTag, fetchTags, fetchNoteTags } from '../../../actions/tag_actions';
+import { fetchTaggedNotes, setCurrentNote } from '../../../actions/note_actions';
+import { setCurrentNotebook } from '../../../actions/notebook_actions';
+import { setCurrentTag, deleteTag, fetchTags, fetchNoteTags } from '../../../actions/tag_actions';
 
 const mapStateToProps = state => {
   return ({
@@ -15,9 +15,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = ( dispatch, ownProps ) => {
   return ({
     fetchTaggedNotes: (tag) => dispatch(fetchTaggedNotes(tag)),
-    setCurrentNote: (note) => dispatch(fetchNote(note)),
-    setCurrentNotebook: (notebook) => dispatch(fetchNotebook(notebook)),
-    setCurrentTag: (tag) => dispatch(receiveCurrentTag(tag)),
+    setCurrentNote: (note) => dispatch(setCurrentNote(note)),
+    setCurrentNotebook: (notebook) => dispatch(setCurrentNotebook(notebook)),
+    setCurrentTag: (tag) => dispatch(setCurrentTag(tag)),
     deleteTag: (tag) => dispatch(deleteTag(tag)),
     fetchTags: () => dispatch(fetchTags()),
     fetchNoteTags: (note) => dispatch(fetchNoteTags(note))
