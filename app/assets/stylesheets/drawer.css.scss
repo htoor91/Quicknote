@@ -1,17 +1,24 @@
 .drawer-index-header {
   position: relative;
-  font-family: 'Open Sans';
+  font-family: 'Raleway';
   font-size: 20px;
   color: #7f7f7f;
   height: 50px;
   border-bottom: 1px solid #ececec;
 }
 
+.notebooks-drawer {
+  background: red;
+}
+
 
 .drawer-index-title {
   text-transform: uppercase;
-  font-size: 21px;
+  font-size: 22px;
   margin: 25px 25px -15px 25px;
+  letter-spacing: 2px;
+  font-weight: 300;
+
 }
 
 .selectedNotebook {
@@ -43,7 +50,7 @@
 
 .notebook-index-item-title {
   font-size: 16px;
-  font-family: 'Open Sans';
+  font-family: 'Martel';
   color: #40BC6C;
   font-weight: bold;
   text-overflow: ellipsis;

@@ -1,0 +1,41 @@
+.tags-index-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag-index-item-container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 2px 12px;
+  margin: 10px;
+  border: 1px solid #CCC;
+  height: 20px;
+  background: #F8F8F8;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #595959;
+  transition: background .2s ease-in-out;
+  border-radius: 3px;
+}
+
+.tag-index-item-name {
+  text-transform: uppercase;
+}
+
+.tag-index-item-container:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+  background: #40BC6C;
+}
+
+.tag-index-item-delete-button {
+  margin-left: 15px;
+  color: #595959;
+}
+
+.tag-index-item-container:hover .tag-index-item-delete-button {
+  color: #FFFFFF;
+}
