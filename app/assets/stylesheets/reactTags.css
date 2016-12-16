@@ -36,6 +36,7 @@ div.ReactTags__selected a.ReactTags__remove {
     color: #aaa;
     margin-left: 5px;
     cursor: pointer;
+    display: none;
 }
 
 /* Styles for suggestions */

@@ -94,7 +94,7 @@ class Note extends React.Component {
     if(this.props.noteCount === 0) {
       return (
         <div className="note-container-empty">
-          <h1> NOTES ARE EMPTY</h1>
+          <div className="loader"></div>
         </div>
       );
     } else {
