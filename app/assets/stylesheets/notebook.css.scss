@@ -1,0 +1,112 @@
+
+
+.notebook-form-label {
+  font-size: 13px;
+  font-family: "Raleway";
+  letter-spacing: 1px;
+  color: #878787;
+  margin-bottom: 40px;
+}
+
+.notebook-modals-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  transition: background .2s ease-in-out;
+}
+
+.notebook-modals {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  min-height: 10rem;
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: background .2s ease-in-out;
+}
+
+.delete-modal-confirmation {
+  font-size: 32px;
+  font-family: "Martel";
+  color: #383838;
+  font-weight: 100;
+  transition: background .2s ease-in-out;
+}
+
+.delete-modal-confirmation strong {
+  font-weight: 700;
+  transition: background .2s ease-in-out;
+}
+
+.delete-modal, .notebook-form {
+  text-align: center;
+  transition: background .2s ease-in-out;
+}
+
+// .delete-modal > div {
+//   font-family: 'Open Sans';
+//   font-size: 24px;
+//   padding: 15px;
+//   color: #7c7c7c;
+// }
+
+.delete-modal > button, .notebook-form > button, .notebook-form > input[type="submit"]  {
+  border-radius: 5px;
+  font-family: 'Raleway';
+  width: 50px;
+  height: 15px;
+  font-size: 13px;
+  padding: 9px 71px;
+  text-decoration: none;
+  border-style: none;
+  margin: 0 4px;
+  transition: background .1s ease-in-out;
+  letter-spacing: 1px;
+  margin-top: 55px;
+}
+
+.delete-cancel-button, .create-cancel-button {
+  background: #ECECEC;
+  color: #606060;
+  border: 1px solid #D1D1D1;
+}
+
+.delete-button, .notebook-form-submit {
+  background: #40BC6C;
+  color: #FFFFFF;
+}
+
+.delete-cancel-button:hover, .create-cancel-button:hover {
+  background: #D9D9D9;
+  cursor: pointer;
+}
+
+.delete-button:hover, .notebook-form-submit:hover {
+  background: #1ba34b;
+  cursor: pointer;
+}
+
+.notebook-form > input[type="text"] {
+  font-size: 32px;
+  font-family: "Martel";
+  font-weight: 300;
+  outline: none;
+  border: none;
+  background: transparent;
+  text-align: center;
+  color: #595959;
+}
+
+.notebook-form > input[type="submit"]{
+  height: 33px;
+  width: 192px;
+  padding-right: 153px;
+  padding-left: 39px;
+}

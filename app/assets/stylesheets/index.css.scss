@@ -79,8 +79,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: bold;
-
 }
 
 .empty-title {
@@ -110,13 +108,13 @@
 
 .delete-note-button{
   float: right;
-  height: 25px;
-  width: 25px;
-  background-size: 25px 25px;
+  height: 24px;
+  width: 24px;
+  background-size: 24px;
   margin-top: -20px;
-  background-image: image-url("delete-note-unclicked.png");
+  background-image: image-url("trashcan-icon-white-outline.png");
 }
 
 .delete-note-button:hover {
-  background-image: image-url("delete-note-clicked.png");
+  background-image: image-url("trashcan-icon-white-filled.png");
 }

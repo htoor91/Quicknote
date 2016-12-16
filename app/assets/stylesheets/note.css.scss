@@ -56,3 +56,45 @@
 .note-tools-container > div {
   margin-right: 30px;
 }
+
+.noteview-delete-button {
+  height: 24px;
+  width: 24px;
+  background-size: 24px;
+  background-image: image-url("trashcan-icon-grey-outline.png")
+}
+.noteview-delete-button:hover {
+  background-image: image-url("trashcan-icon-green-outline.png")
+}
+.noteview-save-button {
+  height: 16px;
+  width: 16px;
+  background-size: 16px;
+  background-image: image-url("save-icon-grey-outline.png");
+  background-repeat: no-repeat;
+  margin-top: 5px;
+  margin-left: -24px;
+}
+
+.noteview-save-button:hover {
+  background-image: image-url("save-icon-green-outline.png")
+}
+
+.noteview-tags-button {
+  background-image: image-url("tags-noteview.png");
+  height: 16px;
+  width: 16px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  margin-top: 4px;
+  margin-left: -27px;
+  cursor: default;
+}
+
+.noteview-tags {
+  margin-top: 2px;
+}
+
+.noteview-tags input[type="text"] {
+  outline: none;
+}
