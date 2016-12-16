@@ -30,10 +30,10 @@ class UpdateNotebookModal extends React.Component {
         description: this.state.description,
         id: this.props.currentNotebook.id
       };
-      debugger
       this.props.updateNotebook(notebook);
       this.props.closeModal();
       this.props.fetchNotebooks();
+      this.props.setCurrentNotebook(notebook);
 
     }
   }

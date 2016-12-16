@@ -4,7 +4,6 @@ import { updateNotebook, setCurrentNotebook, fetchNotebooks } from '../../../act
 
 
 const mapStateToProps = (state) => {
-  debugger
   return ({
     currentNotebook: state.notebooks.currentNotebook
   });
@@ -17,7 +16,8 @@ const mapDispatchToProps = ( dispatch, ownProps ) => {
     closeDrawer: ownProps.closeDrawer,
     notebookTitle: ownProps.notebookTitle,
     updateNotebook: (notebook) => dispatch(updateNotebook(notebook)),
-    fetchNotebooks: () => dispatch(fetchNotebooks())
+    fetchNotebooks: () => dispatch(fetchNotebooks()),
+    setCurrentNotebook: (notebook) => dispatch(setCurrentNotebook(notebook))
   });
 };
 
