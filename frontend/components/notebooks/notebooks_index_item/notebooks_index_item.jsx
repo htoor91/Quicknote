@@ -1,28 +1,42 @@
 import React from 'react';
 import Modal from 'react-modal';
 import DeleteNotebookModal from '../delete_notebook/delete_notebook';
+import UpdateNotebookModalContainer from '../update_notebook/update_notebook_container';
 
 class NotebooksIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      deleteModalOpen: false
+      deleteModalOpen: false,
+      updateModalOpen: false
     };
     this.openDeleteModal = this.openDeleteModal.bind(this);
     this.closeDeleteModal = this.closeDeleteModal.bind(this);
     this.deleteHandler = this.deleteHandler.bind(this);
     this.selectNotebookHandler = this.selectNotebookHandler.bind(this);
+    this.openUpdateModal = this.openUpdateModal.bind(this);
+    this.closeUpdateModal = this.closeUpdateModal.bind(this);
   }
 
 
   openDeleteModal(e) {
-    e.stopPropagation();
+    // e.stopPropagation();
     this.setState({ deleteModalOpen: true });
   }
 
   closeDeleteModal(e) {
-    e.stopPropagation();
+    // e.stopPropagation();
     this.setState({ deleteModalOpen: false });
+  }
+
+  openUpdateModal(e) {
+    // e.stopPropagation();
+    this.setState({ updateModalOpen: true });
+  }
+
+  closeUpdateModal(e) {
+    // e.stopPropagation();
+    this.setState({ updateModalOpen: false });
   }
 
   deleteHandler() {
@@ -30,7 +44,7 @@ class NotebooksIndexItem extends React.Component {
       this.props.setCurrentNotebook(null);
     }
 
-    const matchedNotes = this.props.notes.filter( (notes) => note.notebook_id === this.props.notebook.id);
+    const matchedNotes = this.props.notes.filter( (note) => note.notebook_id === this.props.notebook.id);
     matchedNotes.map( (note) => {
       if (note.id === this.props.currentNote.id ) {
         this.props.setCurrentNote(null);
@@ -38,7 +52,12 @@ class NotebooksIndexItem extends React.Component {
     });
     this.props.deleteNotebook(this.props.notebook);
     this.props.fetchNotes();
+    this.props.fetchNotebooks();
     this.closeDeleteModal();
+  }
+
+  updateHandler() {
+
   }
 
   selectNotebook() {
@@ -66,29 +85,6 @@ class NotebooksIndexItem extends React.Component {
     const deleteButtonClassName = (this.props.notebooks.length > 1) ?
                                   "delete-notebook-button" : "delete-notebook-button default-notebook";
 
-    const deleteModalStyle = {
-      overlay: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(237, 237, 237, 0.75)'
-      },
-      content: {
-        position: 'fixed',
-        width: '400px',
-        top: '50%',
-        left: '50%',
-        bottom: 'auto',
-        right: 'auto',
-        borderRadius: '10px',
-        minHeight: '10rem',
-        padding: '2rem',
-        transform: 'translate(-50%,-50%)',
-        boxShadow: '1px 1px 2px black'
-      }
-    };
     return(
       <li className={itemClassName} onClick={this.selectNotebookHandler}>
         <div className="notebook-index-item-title-container">
@@ -98,25 +94,44 @@ class NotebooksIndexItem extends React.Component {
           <button
             className={deleteButtonClassName}
             onClick={this.openDeleteModal}></button>
+          <button
+            className="update-notebook-button"
+            onClick={this.openUpdateModal}></button>
         </div>
         <div className="notebook-notes-count">
           { this.noteCountRender() }
         </div>
-        <div className="notebook-index-item-description">
-          { this.props.notebook.description }
-        </div>
+
+        <Modal
+          isOpen={ this.state.updateModalOpen }
+          onRequestClose={ this.closeUpdateModal }
+          overlayClassName="notebook-modals-overlay"
+          className="notebook-modals"
+          shouldCloseOnOverlayClick={false}
+          contentLabel="Notebook update modal">
+
+          <UpdateNotebookModalContainer
+            closeModal={this.closeUpdateModal}
+            notebookTitle={this.props.notebook.title}/>
+
+        </Modal>
+
         <Modal
           isOpen={ this.state.deleteModalOpen }
           onRequestClose={ this.closeDeleteModal }
-          style={ deleteModalStyle }
+          overlayClassName="notebook-modals-overlay"
+          className="notebook-modals"
+          shouldCloseOnOverlayClick={false}
           contentLabel="Notebook delete modal">
 
           <DeleteNotebookModal
-            deleteNotebook={this.handleDelete}
+            deleteNotebook={this.deleteHandler}
             closeModal={this.closeDeleteModal}
             notebookTitle={this.props.notebook.title}/>
 
         </Modal>
+
+
 
 
       </li>

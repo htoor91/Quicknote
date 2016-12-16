@@ -37,29 +37,6 @@ class NotebooksIndex extends React.Component {
 	}
 
   render() {
-    const NotebookModalStyle = {
-      overlay: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(237, 237, 237, 0.75)'
-      },
-      content: {
-        position: 'fixed',
-        width: '400px',
-        height: '300px',
-        top: '40%',
-        left: '50%',
-        bottom: 'auto',
-        right: 'auto',
-        borderRadius: '10px',
-        transform: 'translate(-50%,-50%)',
-        boxShadow: '1px 1px 2px black',
-        overflow: 'hidden'
-      }
-    };
 
     return(
       <div className="drawer-index-container">
@@ -82,7 +59,9 @@ class NotebooksIndex extends React.Component {
           <Modal
             isOpen={this.state.notebookModalOpen}
             onRequestClose={this.closeNotebookModal}
-            style={NotebookModalStyle}
+            overlayClassName="notebook-modals-overlay"
+            className="notebook-modals"
+            shouldCloseOnOverlayClick={false}
             contentLabel="Create notebook modal">
 
             <CreateNotebookContainer

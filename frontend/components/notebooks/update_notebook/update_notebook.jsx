@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CreateNotebookModal extends React.Component {
+class UpdateNotebookModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,11 +27,13 @@ class CreateNotebookModal extends React.Component {
     } else {
       const notebook = {
         title: this.state.title,
-        description: this.state.description
+        description: this.state.description,
+        id: this.props.currentNotebook.id
       };
-      this.props.createNotebook(notebook);
+      debugger
+      this.props.updateNotebook(notebook);
       this.props.closeModal();
-      this.props.closeDrawer();
+      this.props.fetchNotebooks();
 
     }
   }
@@ -40,11 +42,11 @@ class CreateNotebookModal extends React.Component {
     return(
       <div className="notebook-form-container">
         <form onSubmit={this.submitHandler} className="notebook-form">
-          <div className="notebook-form-label">CREATE NOTEBOOK</div>
+          <div className="notebook-form-label">UPDATE NOTEBOOK</div>
           <div className="notebook-form-error">{ this.state.error }</div>
 
           <input type="text"
-            placeholder="Title your notebook"
+            placeholder={this.props.notebookTitle}
             value={this.state.title}
             onChange={this.update("title")}
             className="notebook-form-title" />
@@ -54,11 +56,11 @@ class CreateNotebookModal extends React.Component {
             className="create-cancel-button"
             onClick={ this.props.closeModal }>Cancel
           </button>
-          <input className="notebook-form-submit" type="submit" value="Create notebook"/>
+          <input className="notebook-form-submit" type="submit" value="Update notebook"/>
         </form>
       </div>
     );
   }
 }
 
-export default CreateNotebookModal;
+export default UpdateNotebookModal;

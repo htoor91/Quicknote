@@ -6,6 +6,7 @@ export const MAKE_TAG = "MAKE_TAG";
 export const REMOVE_TAG = "REMOVE_TAG";
 // export const REMOVE_TAGGING = "REMOVE_TAGGING";
 export const SET_CURRENT_TAG = "SET_CURRENT_TAG";
+export const REMOVE_ZERO = "REMOVE_ZERO";
 
 export function fetchNoteTags(note) {
   return (dispatch) => {
@@ -54,6 +55,12 @@ export function deleteTag(tag) {
 //     deletedTagging
 //   };
 // };
+
+export const removeZeroIdTag = () => {
+  return {
+    type: REMOVE_ZERO
+  };
+};
 
 export const setCurrentTag = (newCurrentTag) => {
   return {

@@ -37,16 +37,16 @@ class TagsIndexItem extends React.Component {
   }
 
   deleteHandler(e){
-    e.stopPropagation();
+    if (this.props.tagsState[0].tag_name === this.props.tag.tag_name) {
+      this.props.removeZeroIdTag();
+    }
+
     this.props.deleteTag(this.props.tag.id);
     this.props.fetchTags();
     this.props.fetchNoteTags(this.props.currentNote);
-    if (this.props.currentTag){
-      if (this.props.currentTag.id === this.props.tag.id){
-        this.props.setCurrentTag(null);
-        this.props.setCurrentNotebook(null);
-      }
-    }
+    this.props.setCurrentTag(null);
+    this.props.setCurrentNotebook(null);
+
   }
 
   render(){
@@ -57,7 +57,7 @@ class TagsIndexItem extends React.Component {
 
         <button
           className="tag-index-item-delete-button"
-          onClick={ this.deleteHandler }>x</button>
+          onClick={ this.deleteHandler }></button>
       </div>
     );
   }

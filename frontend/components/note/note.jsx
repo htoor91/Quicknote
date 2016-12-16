@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
 import Modal from 'react-modal';
-// import TagFormContainer from '../tags/tag_form/tag_form_container';
-// import NotebookSelectContainer from '../notebooks/notebook_select/notebook_select_container';
+import TagFormContainer from '../tags/tag_form/tags_form_container';
 import DeleteNoteModal from './delete_note';
 
 class Note extends React.Component {
@@ -55,8 +54,7 @@ class Note extends React.Component {
     const newTitle = this.state.title;
     const newBody = this.state.body;
     if ( oldTitle !== newTitle || oldBody !== newBody ){
-      clearTimeout(this.saveTimer);
-      this.props.updateNote(this.state);
+      this.saveHandler();
     }
   }
 
@@ -65,11 +63,13 @@ class Note extends React.Component {
   saveHandler(e){
     clearTimeout(this.saveTimer);
     this.props.updateNote(this.state);
+    this.props.fetchNotes();
   }
 
   deleteHandler(e){
     this.props.deleteNote(this.props.currentNote);
     this.props.setCurrentNote(null);
+    this.props.fetchNotes();
     this.closeDeleteModal();
   }
 
@@ -77,40 +77,19 @@ class Note extends React.Component {
     // TODO Format into 1 function "update"
     clearTimeout(this.saveTimer);
     this.setState({ title: e.currentTarget.value });
-    this.saveTimer = setTimeout( this.autoSave, 3000);
+    this.saveTimer = setTimeout( this.autoSave, 5000);
   }
 
   bodyChangeHandler(text) {
     clearTimeout(this.saveTimer);
     this.setState({ body: text });
-    this.saveTimer = setTimeout( this.autoSave, 3000);
+    this.saveTimer = setTimeout( this.autoSave, 5000);
   }
 
 
   render() {
-    const deleteModalStyle = {
-      overlay: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(237, 237, 237, 0.75)'
-      },
-      content: {
-        position: 'fixed',
-        width: '400px',
-        top: '50%',
-        left: '50%',
-        bottom: 'auto',
-        right: 'auto',
-        borderRadius: '10px',
-        minHeight: '10rem',
-        padding: '2rem',
-        transform: 'translate(-50%,-50%)',
-        boxShadow: '1px 1px 2px black'
-      }
-    };
+
+    // TODO: Add toolsbar, add empty note picture
 
     if(this.props.noteCount === 0) {
       return (
@@ -123,7 +102,24 @@ class Note extends React.Component {
         <div className='note-container'>
 
           <div className="note-tools-container">
-            <h1> TOOLS GO HERE </h1>
+            <div className="noteview-delete-container">
+              <button
+                className="noteview-delete-button"
+                onClick={this.openDeleteModal}>
+              </button>
+            </div>
+
+            <div className="noteview-save-container">
+              <button
+                className="noteview-save-button"
+                onClick={this.saveHandler}>
+              </button>
+            </div>
+
+            <div className="noteview-tags-container">
+              <button className="noteview-tags-button"></button>
+            </div>
+            <TagFormContainer note={this.props.currentNote}/>
           </div>
 
           <div className="note-header-container">
@@ -146,7 +142,9 @@ class Note extends React.Component {
           <Modal
             isOpen={this.state.deleteModalOpen}
             onRequestClose={this.closeDeleteModal}
-            style={ deleteModalStyle }
+            overlayClassName="notebook-modals-overlay"
+            className="notebook-modals"
+            shouldCloseOnOverlayClick={false}
             contentLabel="Delete Note Modal">
 
             <DeleteNoteModal

@@ -3,12 +3,13 @@ import { connect } from 'react-redux';
 import TagsIndexItem from './tags_index_item';
 import { fetchTaggedNotes, setCurrentNote } from '../../../actions/note_actions';
 import { setCurrentNotebook } from '../../../actions/notebook_actions';
-import { setCurrentTag, deleteTag, fetchTags, fetchNoteTags } from '../../../actions/tag_actions';
+import { setCurrentTag, deleteTag, fetchTags, fetchNoteTags, removeZeroIdTag } from '../../../actions/tag_actions';
 
 const mapStateToProps = state => {
   return ({
     currentNote: state.notes.currentNote,
-    currentTag: state.tags.currentTag
+    currentTag: state.tags.currentTag,
+    tagsState: state.tags
   });
 };
 
@@ -20,7 +21,8 @@ const mapDispatchToProps = ( dispatch, ownProps ) => {
     setCurrentTag: (tag) => dispatch(setCurrentTag(tag)),
     deleteTag: (tag) => dispatch(deleteTag(tag)),
     fetchTags: () => dispatch(fetchTags()),
-    fetchNoteTags: (note) => dispatch(fetchNoteTags(note))
+    fetchNoteTags: (note) => dispatch(fetchNoteTags(note)),
+    removeZeroIdTag: () => dispatch(removeZeroIdTag())
   });
 };
 

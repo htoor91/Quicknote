@@ -21,10 +21,10 @@ const APIUtil = {
     });
   },
 
-  deleteTag(tag){
+  deleteTag(id){
     return $.ajax({
       method: "DELETE",
-      url: `/api/tags/${tag.id}`
+      url: `/api/tags/${id}`
     });
   },
 

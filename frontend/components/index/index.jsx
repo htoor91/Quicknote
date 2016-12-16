@@ -9,6 +9,7 @@ class Index extends React.Component {
     let count;
     let title;
     let notes = this.props.notes;
+    
     if (this.props.currentNotebook){
       title = this.props.currentNotebook.title;
       notes = notes.filter( (note) => note.notebook_id === this.props.currentNotebook.id )

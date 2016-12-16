@@ -39,7 +39,7 @@ class Sidebar extends React.Component {
     const notebookId = this.props.currentNotebook ?
                        this.props.currentNotebook.id :
                        this.props.notebooks[0].id;
-    const initialNote = { title: "", body: "", notebook_id: notebookId };
+    const initialNote = { title: "", body: "<p></p>", notebook_id: notebookId };
     this.props.createNote(initialNote);
     if (this.props.currentTag) {
       this.allNotesHandler();
@@ -50,6 +50,8 @@ class Sidebar extends React.Component {
     // No current notebook/tag, since all notes are to be listed
     this.props.setCurrentNotebook(null);
     this.props.setCurrentTag(null);
+    this.closeNotebookDrawer();
+    this.closeTagsDrawer();
   }
 
   notebooksHandler() {

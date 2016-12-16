@@ -31,6 +31,7 @@ const NoteReducer = (state = initState, action) => {
       delete nextState[action.deletedNote.id];
       return nextState;
     case RECEIVE_TAGGED_NOTES:
+    // TODO: Possibly change
       nextState.taggedNotes = action.fetchedNotes;
       return nextState;
     case SET_CURRENT_NOTE:

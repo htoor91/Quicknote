@@ -27,6 +27,7 @@ const NotebookReducer = (state = initState, action) => {
       return nextState;
     case EDIT_NOTEBOOK:
       nextState[action.editedNotebook.id] = action.editedNotebook;
+      
       return nextState;
     case REMOVE_NOTEBOOK:
       delete nextState[action.deletedNotebook.id];

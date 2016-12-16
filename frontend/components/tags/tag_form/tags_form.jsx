@@ -8,8 +8,8 @@ class TagForm extends React.Component {
       currentTags: this.props.tags
     };
 
-    this.deleteHandler = this.deleteHandler.bind(this);
-    this.addHandler = this.addHandler.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.handleAddition = this.handleAddition.bind(this);
     this.refreshTags = this.refreshTags.bind(this);
   }
 
@@ -21,10 +21,10 @@ class TagForm extends React.Component {
 
   refreshTags(){
     this.props.fetchNoteTags(this.props.note);
-    this.props.fetchtags();
+    this.props.fetchTags();
   }
 
-  deleteHandler(idx){
+  handleDelete(idx){
     // this.props.deleteTagging(this.props.tags[idx], this.props.note.id);
     this.refreshTags();
     if (this.props.selectedTag){
@@ -34,7 +34,7 @@ class TagForm extends React.Component {
     }
   }
 
-  addHandler(tag){
+  handleAddition(tag){
     this.props.createTag(tag, this.props.note.id);
     this.refreshTags();
     if (this.props.selectedTag){
@@ -46,12 +46,12 @@ class TagForm extends React.Component {
 
   render(){
     return(
-      <div className="note-form-tags">
+      <div className="noteview-tags">
         <ReactTags
             tags={ this.state.currentTags }
             labelField={'tag_name'}
-            deleteHandler={ this.deleteHandler }
-            addHandler={ this.addHandler }
+            handleDelete={ this.handleDelete }
+            handleAddition={ this.handleAddition }
             allowDeleteFromEmptyInput={false}/>
       </div>
     );

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import TagForm from './tag_form';
+import TagForm from './tags_form';
 import { fetchTaggedNotes } from '../../../actions/note_actions';
 import { createTag, deleteTag, fetchNoteTags, fetchTags } from '../../../actions/tag_actions';
 
@@ -7,7 +7,7 @@ import { createTag, deleteTag, fetchNoteTags, fetchTags } from '../../../actions
 const mapStateToProps = (state, ownProps) => {
   return ({
     tags: state.tags.currentNoteTags,
-    selectedTag: state.tags.currentTag
+    selectedTag: state.tags.currentTag,
   });
 };
 

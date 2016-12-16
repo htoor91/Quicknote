@@ -22,6 +22,7 @@ const APIUtil = {
   },
 
   updateNotebook(notebook) {
+    debugger
     return $.ajax({
       method: "PATCH",
       url: `/api/notebooks/${notebook.id}`,

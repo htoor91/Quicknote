@@ -36,6 +36,7 @@ class NotesIndexItem extends React.Component {
     if (this.props.note.id === this.props.currentNote.id){
       this.props.setCurrentNote(null);
     }
+    this.props.fetchNotes();
     this.closeDeleteModal();
   }
 
@@ -75,30 +76,7 @@ class NotesIndexItem extends React.Component {
   }
 
   render() {
-    // TODO search for all modal styles and change
-    const deleteModalStyle = {
-      overlay: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(237, 237, 237, 0.75)'
-      },
-      content: {
-        position: 'fixed',
-        width: '400px',
-        top: '50%',
-        left: '50%',
-        bottom: 'auto',
-        right: 'auto',
-        borderRadius: '10px',
-        minHeight: '10rem',
-        padding: '2rem',
-        transform: 'translate(-50%,-50%)',
-        boxShadow: '1px 1px 2px black'
-      }
-    };
+
     const itemClassName = (this.props.currentNote &&
                           (this.props.note.id === this.props.currentNote.id)) ?
                           "note-index-item-li selected" : "note-index-item-li";
@@ -124,7 +102,9 @@ class NotesIndexItem extends React.Component {
         <Modal
           isOpen={this.state.deleteModalOpen}
           onRequestClose={this.closeDeleteModal}
-          style={ deleteModalStyle }
+          overlayClassName="notebook-modals-overlay"
+          className="notebook-modals"
+          shouldCloseOnOverlayClick={false}
           contentLabel="Note index item delete modal">
 
           <DeleteNoteModal

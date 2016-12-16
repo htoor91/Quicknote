@@ -9,3 +9,7 @@ export const allNotebooks = (notebooks) => Object.keys(notebooks).map((id) => {
 export const allTags = (tags) => Object.keys(tags).map((id) => {
   return tags[id];
 });
+
+export const allNoteTags = (tags) => Object.keys(tags).map((id) => {
+  return tags[id];
+});
