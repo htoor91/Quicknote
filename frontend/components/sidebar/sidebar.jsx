@@ -127,7 +127,7 @@ class Sidebar extends React.Component {
           <div className="tags-tooltip">TAGS</div>
         </div>
         <div className="logout-button-container">
-          <button className="logout-button" onClick={this.logoutHandler}>LOGOUT</button>
+          <button className="logout-button" onClick={this.logoutHandler}></button>
         </div>
         <div className="avatar-button-container">
           <button className="avatar-button" onClick={this.avatarHandler}></button>

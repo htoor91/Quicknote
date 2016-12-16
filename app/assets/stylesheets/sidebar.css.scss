@@ -239,11 +239,17 @@
 
 
 .logout-button-container {
-
+  margin: 0 auto;
+  background-image: image_url("log-out.png");
+  background-size: 36px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 15px;
+  top: 750px;
 }
 
 .logout-button-container:hover {
-
+  cursor: pointer;
 }
 
 .avatar-button-container {
