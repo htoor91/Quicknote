@@ -8,7 +8,8 @@ const mapStateToProps = (state) => {
     currentNote: state.notes.currentNote,
     notebooks: state.notebooks.allNotebooks,
     currentUser: state.session.currentUser,
-    noteCount: state.notes.allNotes.length
+    noteCount: state.notes.allNotes.length,
+    allNotes: state.notes.allNotes
   });
 };
 

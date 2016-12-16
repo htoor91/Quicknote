@@ -17,8 +17,14 @@ const NoteReducer = (state = initState, action) => {
       nextState.currentNote = action.fetchedNote;
       return nextState;
     case RECEIVE_NOTES:
+
       nextState = merge(nextState, action.allNotes);
-      nextState.allNotes = allNotes(action.allNotes);
+      const sortedNotes = allNotes(action.allNotes).sort((a,b) => {
+        let dateOne = new Date(a.updated_at);
+        let dateTwo = new Date(b.updated_at);
+        return dateTwo - dateOne;
+      });
+      nextState.allNotes = sortedNotes;
       return nextState;
     case MAKE_NOTE:
       nextState[action.newNote.id] = action.newNote;
@@ -26,6 +32,7 @@ const NoteReducer = (state = initState, action) => {
       return nextState;
     case EDIT_NOTE:
       nextState[action.editedNote.id] = action.editedNote;
+      nextState.currentNote = action.editedNote;
       return nextState;
     case REMOVE_NOTE:
       delete nextState[action.deletedNote.id];

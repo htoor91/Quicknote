@@ -68,8 +68,9 @@ class Note extends React.Component {
 
   deleteHandler(e){
     this.props.deleteNote(this.props.currentNote);
-    this.props.setCurrentNote(null);
+    // this.props.setCurrentNote(null);
     this.props.fetchNotes();
+    this.props.setCurrentNote(this.props.allNotes[0]);
     this.closeDeleteModal();
   }
 
@@ -77,13 +78,13 @@ class Note extends React.Component {
     // TODO Format into 1 function "update"
     clearTimeout(this.saveTimer);
     this.setState({ title: e.currentTarget.value });
-    this.saveTimer = setTimeout( this.autoSave, 5000);
+    this.saveTimer = setTimeout( this.autoSave, 2000);
   }
 
   bodyChangeHandler(text) {
     clearTimeout(this.saveTimer);
     this.setState({ body: text });
-    this.saveTimer = setTimeout( this.autoSave, 5000);
+    this.saveTimer = setTimeout( this.autoSave, 2000);
   }
 
 

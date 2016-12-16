@@ -34,9 +34,15 @@ class NotesIndexItem extends React.Component {
   deleteHandler(e){
     this.props.deleteNote(this.props.note);
     if (this.props.note.id === this.props.currentNote.id){
+      debugger
       this.props.setCurrentNote(null);
     }
     this.props.fetchNotes();
+    this.props.fetchTags();
+    // if (this.props.tagCount === 0) {
+    //   this.props.setCurrentTag(null);
+    //   this.props.setCurrentNotebook(null);
+    // }
     this.closeDeleteModal();
   }
 
@@ -50,8 +56,8 @@ class NotesIndexItem extends React.Component {
         </div>
       );
     } else {
-      const title = this.props.note.title.slice(0,15);
-      if (this.props.note.title.length > 15){
+      const title = this.props.note.title.slice(0,30);
+      if (this.props.note.title.length > 30){
         return (
           <div className="shortened-title">
             { title + "..." }
