@@ -40,7 +40,7 @@ Note editing is implemented using the Quill.js library, allowing for a Word-proc
 
 Users are able to organize their notes inside notebooks.  Notebooks can be created, updated, and deleted.  Every user starts off with a default notebook that they can populate with notes.  
 
-![image of notebook drawer](/docs/production_images/notebook-view.png)
+![image of notebook drawer](/docs/production_images/notebook-view-1.png)
 
 ### Tags
 
