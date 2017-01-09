@@ -2,7 +2,8 @@ class Api::TagsController < ApplicationController
 
   def index
     @tags = []
-    current_user.notes.each do |note|
+    notes = current_user.notes.includes(:tags)
+    notes.each do |note|
       @tags += note.tags
     end
 
@@ -12,8 +13,9 @@ class Api::TagsController < ApplicationController
   def show
     @tag = Tag.find(params[:id])
     @tagged_notes = []
+    notes = current_user.notes.includes(:taggings)
     if @tag
-      current_user.notes.each do |note|
+      notes.each do |note|
         @tagged_notes << note if note.taggings.any? { |tagging| tagging.tag_id == @tag.id }
       end
       render json: @tagged_notes
@@ -39,16 +41,17 @@ class Api::TagsController < ApplicationController
     end
   end
 
-  # def destroyTagging
-  #   @tag = Tag.find(params[:id])
-  #   @tagging = @tag.taggings.select { |tagging| tagging.note_id == tag_params[:note_id] }.first
-  #   if @tagging
-  #     @tagging.destroy
-  #     render json: @tagging
-  #   else
-  #     render json: @tagging.errors.full_messages, status: 422
-  #   end
-  # end
+  def destroyTagging
+
+    @tag = Tag.find(params[:id])
+    @tagging = @tag.taggings.select { |tagging| tagging.note_id == tag_params[:note_id].to_i }.first
+    if @tagging
+      @tagging.destroy
+      render json: @tagging
+    else
+      render json: @tagging.errors.full_messages, status: 422
+    end
+  end
 
 
   private

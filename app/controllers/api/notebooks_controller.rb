@@ -1,7 +1,7 @@
 class Api::NotebooksController < ApplicationController
 
   def index
-    @notebooks = current_user.notebooks
+    @notebooks = current_user.notebooks.includes(:notes)
     render :index
   end
 
