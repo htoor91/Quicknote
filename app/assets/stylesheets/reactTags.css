@@ -31,23 +31,25 @@ div.ReactTags__selected span.ReactTags__tag {
     padding: 5px;
     margin: 2px 5px;
     border-radius: 2px;
+    font-family: "Raleway";
 }
 div.ReactTags__selected a.ReactTags__remove {
     color: #aaa;
     margin-left: 5px;
     cursor: pointer;
-    display: none;
 }
 
 /* Styles for suggestions */
 div.ReactTags__suggestions {
     position: absolute;
+    font-family: "Raleway"
 }
 div.ReactTags__suggestions ul {
     list-style-type: none;
     box-shadow: .05em .01em .5em rgba(0,0,0,.2);
     background: white;
     width: 200px;
+    color: #40BC6C;
 }
 div.ReactTags__suggestions li {
     border-bottom: 1px solid #ddd;
@@ -55,11 +57,12 @@ div.ReactTags__suggestions li {
     margin: 0;
 }
 div.ReactTags__suggestions li mark {
-    text-decoration: underline;
+
     background: none;
-    font-weight: 600;
+    font-weight: bold;
 }
 div.ReactTags__suggestions ul li.active {
-    background: #b7cfe0;
+    background: #40BC6C;
     cursor: pointer;
+    color: white;
 }
