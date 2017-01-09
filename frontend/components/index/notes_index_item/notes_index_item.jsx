@@ -34,7 +34,6 @@ class NotesIndexItem extends React.Component {
   deleteHandler(e){
     this.props.deleteNote(this.props.note);
     if (this.props.note.id === this.props.currentNote.id){
-      debugger
       this.props.setCurrentNote(null);
     }
     this.props.fetchNotes();

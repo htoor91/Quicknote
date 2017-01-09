@@ -28,13 +28,14 @@ const APIUtil = {
     });
   },
 
-  // deleteTagging(tag, noteId){
-  //   return $.ajax({
-  //     method: "DELETE",
-  //     url: `/api/tagging/${tag.id}`,
-  //     data: {tag: {id: `${tag.id}`, note_id: noteId}}
-  //   });
-  // }
+  deleteTagging(tag, noteId){
+
+    return $.ajax({
+      method: "DELETE",
+      url: `/api/tagging/${tag.id}`,
+      data: {tag: {id: `${tag.id}`, note_id: noteId}}
+    });
+  }
 };
 
 export default APIUtil;

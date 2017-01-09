@@ -25,7 +25,7 @@ class TagForm extends React.Component {
   }
 
   handleDelete(idx){
-    // this.props.deleteTagging(this.props.tags[idx], this.props.note.id);
+    this.props.deleteTagging(this.props.tags[idx], this.props.note.id);
     this.refreshTags();
     if (this.props.selectedTag){
       if (this.props.selectedTag.tag_name === this.props.tags[idx].name){
@@ -44,11 +44,17 @@ class TagForm extends React.Component {
     }
   }
 
+  tagsList() {
+    return this.props.allTags.map((tag) => tag.tag_name);
+  }
+
   render(){
     return(
       <div className="noteview-tags">
         <ReactTags
             tags={ this.state.currentTags }
+            suggestions={this.tagsList()}
+            minQueryLength={1}
             labelField={'tag_name'}
             handleDelete={ this.handleDelete }
             handleAddition={ this.handleAddition }

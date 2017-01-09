@@ -4,7 +4,7 @@ export const RECEIVE_TAGS = "RECEIVE_TAGS";
 export const RECEIVE_NOTE_TAGS = "RECEIVE_NOTE_TAGS";
 export const MAKE_TAG = "MAKE_TAG";
 export const REMOVE_TAG = "REMOVE_TAG";
-// export const REMOVE_TAGGING = "REMOVE_TAGGING";
+export const REMOVE_TAGGING = "REMOVE_TAGGING";
 export const SET_CURRENT_TAG = "SET_CURRENT_TAG";
 export const REMOVE_ZERO = "REMOVE_ZERO";
 
@@ -41,20 +41,20 @@ export function deleteTag(tag) {
   };
 }
 
-// export function deleteTagging(tag, noteId) {
-//   return (dispatch) => {
-//     return APIUtil.deleteTagging(tag, noteId).then(
-//       (deletedTagging) => dispatch(removeTagging(deletedTagging))
-//     );
-//   };
-// }
+export function deleteTagging(tag, noteId) {
+  return (dispatch) => {
+    return APIUtil.deleteTagging(tag, noteId).then(
+      (deletedTagging) => dispatch(removeTagging(deletedTagging))
+    );
+  };
+}
 
-// export const removeTagging = (deletedTagging) => {
-//   return {
-//     type: REMOVE_TAGGING,
-//     deletedTagging
-//   };
-// };
+export const removeTagging = (deletedTagging) => {
+  return {
+    type: REMOVE_TAGGING,
+    deletedTagging
+  };
+};
 
 export const removeZeroIdTag = () => {
   return {

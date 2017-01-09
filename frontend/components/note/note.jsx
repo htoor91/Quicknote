@@ -90,7 +90,7 @@ class Note extends React.Component {
 
   render() {
 
-    // TODO: Add toolsbar, add empty note picture
+    // TODO: Add empty note picture
 
     if(this.props.noteCount === 0) {
       return (
