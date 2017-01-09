@@ -489,3 +489,24 @@
 [2016-12-16 10:18:09 -0500 Hassans-MacBook-Air.local (65770)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Tag with 'id'=49
 [2016-12-16 13:59:42 -0500 Hassans-MacBook-Air.local (65770)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Tag with 'id'=63
 [2016-12-16 14:42:50 -0500 Hassans-MacBook-Air.local (65770)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Tag with 'id'=62
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Starting the New Relic agent in "development" environment.
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] WARN : No configuration file found. Working directory = /Users/hassantoor/Desktop/Quicknote
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] WARN : Looked in these locations (based on defaults): /Users/hassantoor/Desktop/Quicknote/config/newrelic.yml, /Users/hassantoor/Desktop/Quicknote/newrelic.yml, /Users/hassantoor/Desktop/Quicknote/config/newrelic.yml, /Users/hassantoor/Desktop/Quicknote/newrelic.yml, /Users/hassantoor/.newrelic/newrelic.yml, /Users/hassantoor/newrelic.yml
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Environment: development
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Dispatcher: webrick
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Application: development
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing ActiveJob instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing ActiveRecord 4+ instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing Net instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing Rails 4 Controller instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing Rails 4 view instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Installing Rails 4 Error instrumentation
+[2017-01-09 10:48:17 -0500 Hassans-MacBook-Air.local (14564)] INFO : Finished instrumentation
+[2017-01-09 10:48:18 -0500 Hassans-MacBook-Air.local (14564)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-01-09 10:50:13 -0500 Hassans-MacBook-Air.local (14564)] ERROR : Invalid license key, please contact support@newrelic.com
+[2017-01-09 10:50:13 -0500 Hassans-MacBook-Air.local (14564)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

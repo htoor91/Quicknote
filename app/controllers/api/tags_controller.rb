@@ -12,6 +12,7 @@ class Api::TagsController < ApplicationController
 
   def show
     @tag = Tag.find(params[:id])
+    
     @tagged_notes = []
     notes = current_user.notes.includes(:taggings)
     if @tag
