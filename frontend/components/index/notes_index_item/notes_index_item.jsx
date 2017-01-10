@@ -47,10 +47,7 @@ class NotesIndexItem extends React.Component {
     this.props.fetchNotes();
     this.props.fetchTags();
     this.props.setCurrentNote(this.props.allNotes[idx]);
-    // if (this.props.tagCount === 0) {
-    //   this.props.setCurrentTag(null);
-    //   this.props.setCurrentNotebook(null);
-    // }
+
     this.closeDeleteModal();
   }
 
