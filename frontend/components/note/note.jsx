@@ -67,10 +67,18 @@ class Note extends React.Component {
   }
 
   deleteHandler(e){
+    let currentId = this.props.currentNote.id;
+    let idx = 0;
+    let firstAllNotesId = this.props.allNotes[idx].id;
+
+    if (currentId === firstAllNotesId) {
+      idx = 1;
+    }
+
+
     this.props.deleteNote(this.props.currentNote);
-    // this.props.setCurrentNote(null);
     this.props.fetchNotes();
-    this.props.setCurrentNote(this.props.allNotes[1]);
+    this.props.setCurrentNote(this.props.allNotes[idx]);
     this.closeDeleteModal();
   }
 

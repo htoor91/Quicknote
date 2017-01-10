@@ -32,12 +32,21 @@ class NotesIndexItem extends React.Component {
   }
 
   deleteHandler(e){
+    let currentId = this.props.currentNote.id;
+    let idx = 0;
+    let firstAllNotesId = this.props.allNotes[idx].id;
+
+    if (currentId === firstAllNotesId) {
+      idx = 1;
+    }
+
     this.props.deleteNote(this.props.note);
     if (this.props.note.id === this.props.currentNote.id){
       this.props.setCurrentNote(null);
     }
     this.props.fetchNotes();
     this.props.fetchTags();
+    this.props.setCurrentNote(this.props.allNotes[idx]);
     // if (this.props.tagCount === 0) {
     //   this.props.setCurrentTag(null);
     //   this.props.setCurrentNotebook(null);
