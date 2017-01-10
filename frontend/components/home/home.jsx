@@ -27,7 +27,6 @@ class Home extends React.Component {
     }
   }
 
-  // TODO: add loading bar
   render(){
 
     if (this.props.loggedIn) {

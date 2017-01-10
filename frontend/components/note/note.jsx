@@ -70,7 +70,7 @@ class Note extends React.Component {
     this.props.deleteNote(this.props.currentNote);
     // this.props.setCurrentNote(null);
     this.props.fetchNotes();
-    this.props.setCurrentNote(this.props.allNotes[0]);
+    this.props.setCurrentNote(this.props.allNotes[1]);
     this.closeDeleteModal();
   }
 
