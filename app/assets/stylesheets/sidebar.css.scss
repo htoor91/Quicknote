@@ -62,6 +62,7 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s, opacity 0.5s;
+  z-index: 1000000;
 }
 
 .addNote-tooltip:after {
@@ -109,6 +110,7 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s, opacity 0.5s;
+  z-index: 1000000;
 }
 
 .allNotes-tooltip:after {
@@ -158,6 +160,8 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s, opacity 0.5s;
+  z-index: 1000000;
+
 }
 
 .notebooks-tooltip:after {
@@ -208,6 +212,8 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s, opacity 0.5s;
+  z-index: 1000000;
+
 }
 
 
@@ -238,6 +244,8 @@
 
 
 
+
+
 .logout-button-container {
   margin: 0 auto;
   background-image: image_url("log-out.png");
@@ -245,11 +253,48 @@
   background-repeat: no-repeat;
   position: absolute;
   left: 15px;
-  top: 750px;
+  bottom: 0;
 }
 
 .logout-button-container:hover {
   cursor: pointer;
+}
+
+.logout-tooltip {
+  position: absolute;
+  background: #606060;
+  color: #D9D9D9;
+  padding: 2px 5px;
+  white-space: nowrap;
+  border-radius: 2px;
+  top: 7px;
+  left: 40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+  z-index: 1000000;
+}
+
+.logout-tooltip:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.logout-tooltip:after {
+  border-right-color: #606060;
+  border-width: 4px;
+  margin-top: -5px;
+}
+.logout-button-container:hover .logout-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
 }
 
 .avatar-button-container {
