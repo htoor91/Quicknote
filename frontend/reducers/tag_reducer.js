@@ -31,9 +31,7 @@ const TagReducer = (state = initState, action) => {
       nextState.allTags.push(action.newTag);
 
       return nextState;
-    // case REMOVE_TAGGING:
-    //   // TODO
-    //   return nextState;
+
     case REMOVE_TAG:
       delete nextState[action.deletedTag.id];
       nextState.currentTag = null;
