@@ -5,7 +5,6 @@ import Root from './components/root';
 import Modal from 'react-modal';
 
 document.addEventListener("DOMContentLoaded", () => {
-
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
     var store = configureStore(preloadedState);
