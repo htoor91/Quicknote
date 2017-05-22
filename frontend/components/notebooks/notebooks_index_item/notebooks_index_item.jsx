@@ -73,7 +73,7 @@ class NotebooksIndexItem extends React.Component {
   }
 
   noteCountRender() {
-    const matchedNotes = this.props.notes.filter( (note) => note.notebook_id === this.props.notebook.id)
+    const matchedNotes = this.props.notes.filter( (note) => note.notebook_id === this.props.notebook.id);
     return `${ matchedNotes.length } notes`;
   }
 
