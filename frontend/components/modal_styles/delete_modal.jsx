@@ -1,7 +1,7 @@
 import React from 'react';
 
-const DeleteNoteModal = ({ deleteNote, closeModal, noteTitle }) => {
-  const title = (noteTitle === "") ? "Untitled" : noteTitle;
+const DeleteModal = ({ deleteHandle, closeModal, propTitle }) => {
+  const title = (propTitle === "") ? "Untitled" : propTitle;
   return(
     <div className="delete-modal">
       <div className="delete-modal-confirmation">
@@ -13,10 +13,10 @@ const DeleteNoteModal = ({ deleteNote, closeModal, noteTitle }) => {
       </button>
       <button
         className="delete-button"
-        onClick={ deleteNote }>Delete
+        onClick={ deleteHandle }>Delete
       </button>
     </div>
   );
 };
 
-export default DeleteNoteModal;
+export default DeleteModal;

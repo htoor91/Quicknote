@@ -1,7 +1,7 @@
 import React from 'react';
 import Moment from 'moment';
 import Modal from 'react-modal';
-import DeleteNoteModal from './delete_note';
+import DeleteNoteModal from '../../modal_styles/delete_modal';
 
 class NotesIndexItem extends React.Component {
   constructor(props) {
@@ -119,9 +119,9 @@ class NotesIndexItem extends React.Component {
           contentLabel="Note index item delete modal">
 
           <DeleteNoteModal
-            deleteNote={this.deleteHandler}
+            deleteHandle={this.deleteHandler}
             closeModal={this.closeDeleteModal}
-            noteTitle={this.props.note.title} />
+            propTitle={this.props.note.title} />
         </Modal>
 
       </li>

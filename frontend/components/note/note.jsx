@@ -2,7 +2,8 @@ import React from 'react';
 import ReactQuill from 'react-quill';
 import Modal from 'react-modal';
 import TagFormContainer from '../tags/tag_form/tags_form_container';
-import DeleteNoteModal from './delete_note';
+import DeleteNoteModal from '../modal_styles/delete_modal';
+
 
 class Note extends React.Component {
   constructor(props) {
@@ -157,9 +158,9 @@ class Note extends React.Component {
             contentLabel="Delete Note Modal">
 
             <DeleteNoteModal
-              deleteNote={this.deleteHandler}
+              deleteHandle={this.deleteHandler}
               closeModal={this.closeDeleteModal}
-              noteTitle={this.state.title}/>
+              propTitle={this.state.title}/>
           </Modal>
 
         </div>

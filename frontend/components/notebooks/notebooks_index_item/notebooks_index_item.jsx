@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import DeleteNotebookModal from '../delete_notebook/delete_notebook';
+import DeleteNotebookModal from '../../modal_styles/delete_modal';
 import UpdateNotebookModalContainer from '../update_notebook/update_notebook_container';
 
 class NotebooksIndexItem extends React.Component {
@@ -125,9 +125,9 @@ class NotebooksIndexItem extends React.Component {
           contentLabel="Notebook delete modal">
 
           <DeleteNotebookModal
-            deleteNotebook={this.deleteHandler}
+            deleteHandle={this.deleteHandler}
             closeModal={this.closeDeleteModal}
-            notebookTitle={this.props.notebook.title}/>
+            propTitle={this.props.notebook.title}/>
 
         </Modal>
 
